@@ -1,0 +1,10 @@
+{
+  "name": "aigram-v13-3-backend",
+  "version": "13.3.1",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "openai": "^5.0.0",
+    "pg": "^8.13.1"
+  }
+}
