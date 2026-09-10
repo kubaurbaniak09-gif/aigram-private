@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="theme-color" content="#0a0a0c">
 <link rel="manifest" href="manifest.json">
-<title>AIgram V6</title>
+<title>AIgram V13</title>
 <style>
 :root{
  --bg:#09090b;--surface:#111216;--surface2:#181a20;--surface3:#20232b;
@@ -85,6 +85,58 @@ img{background:#17191f}
 .typing{display:inline-flex;gap:4px;padding:10px 13px;background:var(--surface2);border-radius:17px;margin:7px 0}.typing i{width:5px;height:5px;background:#aaa;border-radius:50%;animation:blink 1s infinite}.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
 .notice-dot{width:8px;height:8px;border-radius:50%;background:#ff3b6b;position:absolute;top:7px;right:7px}
 
+
+.brainbadge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:11px}
+.brainbadge.on{border-color:#6e61ff;background:rgba(110,97,255,.12)}
+.brainstatus{width:8px;height:8px;border-radius:50%;background:#777}.brainbadge.on .brainstatus{background:#61e294;box-shadow:0 0 10px #61e294}
+.worldcard{padding:12px;border:1px solid var(--line);border-radius:16px;background:var(--surface2);margin-top:10px}
+.aihint{font-size:11px;color:var(--muted);margin-top:6px}
+
+
+.relationship-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:10px}.meter{height:6px;border-radius:999px;background:#25262c;overflow:hidden;margin-top:4px}.meter>i{display:block;height:100%;background:linear-gradient(90deg,#745cff,#ff4fa3)}.event{padding:10px 0;border-bottom:1px solid var(--line)}.deal{padding:12px;border:1px solid var(--line);border-radius:15px;margin:8px 0;background:var(--surface2)}.cf{border-color:#34c759!important}.groupavatars{display:flex}.groupavatars img{margin-left:-8px;border:2px solid var(--surface);width:32px;height:32px;border-radius:50%}.groupavatars img:first-child{margin-left:0}
+
+.castcard{padding:12px;border:1px solid var(--line);border-radius:16px;background:var(--surface2);margin-bottom:10px}
+.secret{padding:10px;border:1px dashed var(--line);border-radius:14px;margin-top:8px}
+.notechip{padding:8px 12px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);white-space:nowrap}
+.achievement{padding:10px;border:1px solid var(--line);border-radius:14px;margin:7px 0}
+.wallet{font-size:28px;font-weight:800;letter-spacing:-1px}
+.trend{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}
+.summarycard{padding:12px;border:1px solid #6d5dfc;border-radius:16px;background:rgba(109,93,252,.08);margin:10px 0}
+.statusdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#34c759;margin-right:5px}
+.private-badge{font-size:10px;padding:3px 6px;border:1px solid var(--line);border-radius:999px}
+
+
+.graphrow{display:grid;grid-template-columns:44px 1fr auto;gap:9px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}
+.eventcard{padding:12px;border:1px solid var(--line);border-radius:15px;background:var(--surface2);margin:8px 0}
+.livebox{padding:14px;border-radius:18px;background:linear-gradient(135deg,rgba(116,92,255,.15),rgba(255,79,163,.12));border:1px solid var(--line)}
+.livecomments{max-height:300px;overflow:auto;margin:10px 0}.livecomment{padding:6px 0}
+.media-card{border-radius:16px;overflow:hidden;border:1px solid var(--line);margin:8px 0}.media-card img{width:100%;display:block}
+.clockpill{padding:6px 9px;border:1px solid var(--line);border-radius:999px;font-size:11px}
+
+
+.dna-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dna-chip{padding:9px;border:1px solid var(--line);border-radius:13px;background:var(--surface2)}
+.timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:14px}
+.timeline-item{position:relative;padding:0 0 15px}
+.timeline-item:before{content:'';position:absolute;width:9px;height:9px;border-radius:50%;background:var(--accent,#8b5cf6);left:-19px;top:4px}
+.recap{padding:14px;border-radius:17px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(124,92,255,.10),rgba(255,70,140,.08))}
+.promise{padding:10px;border:1px solid var(--line);border-radius:14px;margin:7px 0}
+.arc{padding:12px;border:1px solid var(--line);border-radius:15px;background:var(--surface2);margin:8px 0}
+.priority-high{border-left:3px solid currentColor;padding-left:10px}
+.director-badge{font-size:11px;padding:5px 8px;border:1px solid var(--line);border-radius:999px}
+
+
+.life-card{padding:12px;border:1px solid var(--line);border-radius:16px;background:var(--surface2);margin:8px 0}
+.needbar{height:7px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:5px}.needbar i{display:block;height:100%;background:currentColor}
+.life-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.knowledge{padding:9px;border:1px dashed var(--line);border-radius:13px;margin:6px 0}
+.meeting{padding:11px;border:1px solid var(--line);border-radius:14px;margin:7px 0}
+.groupchip{display:inline-block;padding:6px 9px;border:1px solid var(--line);border-radius:999px;margin:3px;font-size:11px}
+
+
+.cloud-ok{padding:10px;border:1px solid var(--line);border-radius:14px;background:var(--surface2);margin:8px 0}
+.sync-pill{padding:5px 8px;border:1px solid var(--line);border-radius:999px;font-size:11px}
+
 </style>
 </head>
 <body>
@@ -123,6 +175,57 @@ img{background:#17191f}
 </section>
 
 
+
+
+
+
+
+<section id="online" class="page">
+ <div class="row"><div><h3 style="margin:0">Online World</h3><div class="muted tiny">AI Brain + cloud state + świat 24/7</div></div><span class="spacer"></span><span id="onlineBadge" class="sync-pill">offline</span></div>
+ <div id="onlineStatus" class="cloud-ok" style="margin-top:12px"></div>
+ <label>Backend URL</label><input id="onlineBackend" placeholder="https://twoj-backend.vercel.app">
+ <div class="row" style="margin-top:10px"><button class="primary grow" onclick="connectOnlineWorld()">Połącz</button><button class="secondary grow" onclick="syncCloud(true)">Synchronizuj</button></div>
+ <div class="row" style="margin-top:8px"><button class="secondary grow" onclick="testAI()">Test AI</button><button class="secondary grow" onclick="toggleAutoSync()">Auto-sync</button></div>
+ <div class="muted tiny" style="margin-top:10px">Klucz OpenAI pozostaje wyłącznie na backendzie. Nie zapisuj go w index.html.</div>
+</section>
+<section id="life" class="page">
+ <div class="row"><div><h3 style="margin:0">Life Simulation</h3><div class="muted tiny">Potrzeby, emocje, opinie, spotkania i wiedza świata</div></div><span class="spacer"></span><span class="director-badge">V12</span></div>
+ <div id="lifeSummary"></div>
+ <div class="row" style="margin-top:10px"><button class="primary grow" onclick="lifeTick(true)">Przesuń życie</button><button class="secondary grow" onclick="scheduleMeeting()">Umów spotkanie</button></div>
+ <h3>Paczki znajomych</h3><div id="friendGroups"></div>
+ <h3>Spotkania</h3><div id="meetingsList"></div>
+ <h3>Życie głównych postaci</h3><div id="lifeProfiles"></div>
+ <h3>World Knowledge</h3><div id="knowledgeList"></div>
+</section>
+<section id="sentient" class="page">
+  <div class="row">
+    <div><h3 style="margin:0">Sentient World</h3><div class="muted tiny">DNA postaci, pamięć, obietnice, story arcs i World Director</div></div>
+    <span class="spacer"></span><span class="director-badge">V11</span>
+  </div>
+  <div id="sentientRecap" class="recap" style="margin-top:12px"></div>
+  <div class="row" style="margin-top:10px">
+    <button class="primary grow" onclick="runWorldDirector(true)">Uruchom World Director</button>
+    <button class="secondary grow" onclick="generateWorldRecap()">World Recap</button>
+  </div>
+  <h3>Aktywne historie</h3><div id="storyArcsList"></div>
+  <h3>Obietnice i plany</h3><div id="promisesList"></div>
+  <h3>Najważniejsze postacie</h3><div id="importanceList"></div>
+</section>
+<section id="reality" class="page">
+ <div class="row"><div><h3 style="margin:0">Reality Engine</h3><div class="muted tiny">Czas, wydarzenia, social graph i życie postaci</div></div><span class="spacer"></span><span id="realityClock" class="clockpill"></span></div>
+ <div id="realitySummary"></div>
+ <h3>Nadchodzące wydarzenia</h3><div id="calendarList"></div>
+ <h3>Social Graph</h3><div id="graphList"></div>
+ <h3>Media postaci</h3><div id="generatedMediaList"></div>
+</section>
+<section id="persistent" class="page">
+ <div class="row"><div><h3 style="margin:0">Persistent World</h3><div class="muted tiny">Świat działa również podczas Twojej nieobecności</div></div><span class="spacer"></span><button class="secondary" onclick="showOfflineSummary()">Co mnie ominęło?</button></div>
+ <div id="persistentSummary"></div>
+ <h3>Główne postacie</h3><div id="coreCastList"></div>
+ <h3>Trendy</h3><div id="trendsList"></div>
+ <h3>Osiągnięcia</h3><div id="achievementsList"></div>
+</section>
+<section id="world" class="page"><div class="row"><div><h3 style="margin:0">Living World</h3><div class="muted tiny">Autonomiczny świat AIgram</div></div><span class="spacer"></span><span id="worldDay" class="badge"></span></div><div id="worldSummary"></div><h3>Wydarzenia</h3><div id="worldEvents"></div><h3>Współprace</h3><div id="brandDeals"></div></section>
 <section id="reels" class="page">
   <div class="row" style="padding:2px 2px 10px"><h3 style="margin:0">Reels</h3><span class="spacer"></span><span class="muted tiny">AI feed</span></div>
   <div id="reelsFeed"></div>
@@ -146,7 +249,7 @@ img{background:#17191f}
 <nav class="bottomnav"><div class="inner">
 <button class="navbtn active" data-page="home"><svg class="icon"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><small>Home</small></button>
 <button class="navbtn" data-page="explore"><svg class="icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><small>Szukaj</small></button>
-<button class="navbtn" data-page="reels"><svg class="icon"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 4 4 6M13 4l4 6M8 14l4 2.5L8 19Z"/></svg><small>Reels</small></button>
+<button class="navbtn" data-page="online"><svg class="icon"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M7 12a5 5 0 0 1 10 0"/><path d="M10 12a2 2 0 0 1 4 0"/><circle cx="12" cy="16" r="1"/></svg><small>Online</small></button><button class="navbtn" data-page="life"><svg class="icon"><path d="M4 12h4l2-6 4 12 2-6h4"/><circle cx="12" cy="12" r="9"/></svg><small>Life</small></button><button class="navbtn" data-page="sentient"><svg class="icon"><path d="M9 3h6M8 6h8M7 10h10M8 14h8M9 18h6"/><circle cx="12" cy="10" r="8"/></svg><small>Sentient</small></button><button class="navbtn" data-page="reality"><svg class="icon"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg><small>Reality</small></button><button class="navbtn" data-page="persistent"><svg class="icon"><path d="M12 3v9l6 3"/><circle cx="12" cy="12" r="9"/></svg><small>Życie</small></button><button class="navbtn" data-page="world"><svg class="icon"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><small>Świat</small></button><button class="navbtn" data-page="reels"><svg class="icon"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 4 4 6M13 4l4 6M8 14l4 2.5L8 19Z"/></svg><small>Reels</small></button>
 <button class="navbtn" data-page="create"><svg class="icon"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg><small>Dodaj</small></button>
 <button class="navbtn" data-page="messages"><svg class="icon"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg><small>DM</small></button>
 <button class="navbtn" data-page="profile"><svg class="icon"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><small>Profil</small></button>
@@ -157,14 +260,23 @@ img{background:#17191f}
 <div id="toast" class="toast"></div>
 
 <script>
-const DB='AIgramV6DB',STORE='state',KEY='main';
+const DB='AIgramV13DB',STORE='state',KEY='main';
 const FIRST=['Lena','Mila','Noah','Aya','Zoe','Nina','Leo','Sofia','Maya','Emil','Clara','Luca','Emma','Max','Nora','Theo','Julia','Oskar','Amelia','Finn','Elsa','Miko','Laura','Alex','Sara','Kai','Mia','Ben','Lina','Eli','Olivia','Daniel','Hanna','Victor','Elena','Adam','Iga','Klara','Anton','Marta'];
 const CITIES=['Berlin','Warszawa','Amsterdam','London','Tokyo','Barcelona','Rome','Prague','Vienna','Paris','Lisbon','Oslo','Makarska','Wrocław','Split','Zagreb'];
 const BIOS=['travel • coffee • photos','city life & late nights','fitness • food • trips','photography and small adventures','music • friends • spontaneous plans','ocean, mountains, good people'];
 const CAPS=['Poranek bez pośpiechu.','Jeszcze jedno z dzisiaj.','Ten widok zostaje w głowie.','Weekend dobrze się zaczyna.','Bez większego planu.','Trochę miasta, trochę chaosu.','Dzisiaj tylko dobry vibe.','W drodze gdzieś dalej.','Wieczór był lepszy niż plan.','Potrzebowałem/am takiego dnia.'];
 let state,feedOrder=[],feedLimit=20,activeChat=null;
 
-function blank(){return{v:4,initialized:false,player:{name:'',handle:'',city:'',bio:'',avatar:'',followers:18,following:0,views:0,reach:0,private:false},bots:[],posts:[],stories:[],messages:{},likes:{},saved:[],followingIds:[],activity:[],highlights:[],reelLikes:{},mutedIds:[],blockedIds:[],lastSocialTick:Date.now(),created:Date.now()}}
+function blank(){return{v:7,initialized:false,player:{name:'',handle:'',city:'',bio:'',avatar:'',followers:18,following:0,views:0,reach:0,private:false},bots:[],posts:[],stories:[],messages:{},likes:{},saved:[],followingIds:[],activity:[],highlights:[],reelLikes:{},mutedIds:[],blockedIds:[],lastSocialTick:Date.now(),brain:{enabled:false,url:'',status:'local',lastError:''},world:{day:1,events:[],lastTick:Date.now()},relationships:{},brandDeals:[],groups:[],closeFriends:[],creatorLevel:1,
+    coreCast:[],secrets:{},goals:{},notes:[],followRequests:[],fanpages:[],achievements:[],
+    wallet:{balance:0,history:[]},reputation:50,interestProfile:{},viral:{},mentions:[],collabs:[],
+    lastOpened:Date.now(),offlineSummary:[],socialGraph:{},calendar:[],liveSessions:[],broadcast:[],generatedMedia:[],worldClock:{lastServerSync:0},creatorCareer:{xp:0,tier:'Rising Creator',manager:false},
+    sentient:{worldDirector:{enabled:true,lastRun:0,arcCooldown:0},facts:{},episodes:{},promises:[],arcs:[],importance:{},recap:null,notificationQueue:[],lastDirectorSummary:''},
+    life:{profiles:{},groups:[],meetings:[],knowledge:{},dayLog:[],lastTick:0,algorithm:{explore:{},feed:{}},drafts:[],highlights:[]},
+    online:{backendUrl:'',worldId:'',connected:false,lastSync:0,cloudState:false,autoSync:true},
+    
+    
+    created:Date.now()}}
 function imgSeed(s,w=900){return `https://picsum.photos/seed/${encodeURIComponent(s)}/${w}/${w}`}
 function seedBots(){if(state.bots.length)return;for(let i=0;i<100;i++){let f=FIRST[i%FIRST.length];state.bots.push({id:'b'+i,name:f+' '+String.fromCharCode(65+i%26)+'.',handle:f.toLowerCase()+(i+7),city:CITIES[i%CITIES.length],bio:BIOS[i%BIOS.length],avatar:imgSeed('ava_'+f+i,180),followers:80+Math.floor(Math.random()*35000),trait:['warm','flirty','funny','direct','soft','curious'][i%6],affinity:Math.floor(Math.random()*18),chemistry:Math.floor(Math.random()*35),mood:['chill','bold','teasing','jealous','sweet'][i%5],memory:[],topics:[CITIES[i%CITIES.length].toLowerCase(),['travel','fitness','food','cars','music','fashion'][i%6]]})}}
 function seedPosts(){let existing=state.posts.filter(p=>p.author!=='player').length;for(let i=existing;i<190;i++){let b=state.bots[Math.floor(Math.random()*state.bots.length)];state.posts.push({id:'p'+i+'_'+Date.now(),author:b.id,img:imgSeed(b.handle+'_'+i),cap:CAPS[Math.floor(Math.random()*CAPS.length)]+' #'+b.topics[1],location:b.city,likes:8+Math.floor(Math.random()*1800),comments:[],created:Date.now()-Math.random()*6*864e5})}}
@@ -179,6 +291,105 @@ function toast(t){let e=document.getElementById('toast');e.textContent=t;e.style
 async function fileData(f,max=1200){return new Promise((ok,no)=>{let r=new FileReader(),im=new Image();r.onload=e=>{im.onload=()=>{let s=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*s);c.height=Math.round(im.height*s);c.getContext('2d').drawImage(im,0,0,c.width,c.height);ok(c.toDataURL('image/jpeg',.8))};im.src=e.target.result};r.onerror=no;r.readAsDataURL(f)})}
 function previewSelected(input,target){let f=input.files[0];if(!f)return;let u=URL.createObjectURL(f);document.getElementById(target).innerHTML=`<img src="${u}">`}
 function creatorTab(which){createPost.classList.toggle('hidden',which!=='post');createStory.classList.toggle('hidden',which!=='story');tabPost.className=which==='post'?'primary':'secondary';tabStory.className=which==='story'?'primary':'secondary'}
+
+function brainReady(){return !!(state?.brain?.enabled && state.brain.url)}
+function brainURL(){
+ let u=(state.brain?.url||'').trim();
+ if(!u)return '';
+ if(u.endsWith('/'))u=u.slice(0,-1);
+ return u.endsWith('/api/brain')?u:u+'/api/brain';
+}
+function safeHistory(bid,limit=16){
+ return (state.messages[bid]||[]).slice(-limit).map(m=>({from:m.from,text:m.text,time:m.time}));
+}
+function personaPack(b){
+ let r=rel(b.id);return {id:b.id,name:b.name,handle:b.handle,city:b.city,bio:b.bio,trait:b.trait,mood:b.mood,affinity:b.affinity||0,chemistry:b.chemistry||0,relationship:relationshipName(b),trust:r.trust,jealousy:r.jealousy,closeness:r.closeness,tension:r.tension,topics:b.topics||[],age:b.age||18,job:b.job||'',goal:state.goals?.[b.id]||'',secretRevealed:!!b.secretRevealed,dna:b.dna||{},facts:(state.sentient?.facts?.[b.id]||[]).slice(-8),episodes:(state.sentient?.episodes?.[b.id]||[]).slice(-8),life:state.life?.profiles?.[b.id]||null,knownWorldFacts:Object.values(state.life?.knowledge||{}).filter(k=>k.knowers?.includes(b.id)).slice(-8),memory:(b.memory||[]).slice(-18)};
+}
+async function callBrain(task,payload,timeout=18000){
+ if(!brainReady())return null;
+ const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeout);
+ try{
+   let r=await fetch(brainURL(),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({task,payload}),signal:ctrl.signal});
+   if(!r.ok)throw new Error('HTTP '+r.status);
+   let data=await r.json();
+   if(!data||data.ok===false)throw new Error(data?.error||'Błąd AI');
+   state.brain.status='online';state.brain.lastError='';return data;
+ }catch(e){
+   state.brain.status='fallback';state.brain.lastError=String(e.message||e);
+   console.warn('AI brain fallback:',e);return null;
+ }finally{clearTimeout(timer);save()}
+}
+async function testBrain(){
+ let url=brainUrlInput?.value?.trim();
+ if(!url)return toast('Wpisz adres backendu');
+ state.brain.url=url;state.brain.enabled=true;await save();
+ toast('Sprawdzam AI…');
+ let r=await callBrain('ping',{hello:'AIgram V13'},12000);
+ if(r){toast('AI Brain działa ✓');openSettings()}else{toast('Brak połączenia — działa tryb lokalny');openSettings()}
+}
+async function cloudDM(b,text){
+ let latest=state.posts.filter(p=>p.author==='player').sort((a,c)=>c.created-a.created)[0];
+ let r=await callBrain('dm',{
+   language:'pl',
+   player:{name:state.player.name,handle:state.player.handle,city:state.player.city,bio:state.player.bio},
+   persona:personaPack(b),
+   message:text,
+   history:safeHistory(b.id),
+   latestPost:latest?{caption:latest.cap,location:latest.location,image:latest.img,created:latest.created}:null
+ });
+ if(r?.text){remember(b,'user',text);remember(b,'bot',r.text);sentientObserveDM(id,r.text,'bot');if(typeof r.chemistryDelta==='number')b.chemistry=Math.max(0,Math.min(100,(b.chemistry||0)+r.chemistryDelta));if(typeof r.affinityDelta==='number')b.affinity=Math.max(0,Math.min(100,(b.affinity||0)+r.affinityDelta));return r.text}
+ return dmReply(b,text);
+}
+async function cloudCommentReply(p,c,b,text){
+ let r=await callBrain('comment_reply',{
+   language:'pl',
+   player:{name:state.player.name,handle:state.player.handle,city:state.player.city,bio:state.player.bio},
+   persona:personaPack(b),
+   post:{caption:p.cap,location:p.location,image:p.img},
+   originalComment:c.text,
+   thread:(c.replies||[]).slice(-8),
+   playerReply:text
+ });
+ return r?.text||dmReply(b,text);
+}
+async function enrichPostWithBrain(p){
+ if(!brainReady())return;
+ let actors=shuffle(state.bots.filter(b=>!state.blockedIds.includes(b.id))).slice(0,16);
+ let r=await callBrain('post_reactions',{
+   language:'pl',
+   player:{name:state.player.name,handle:state.player.handle,city:state.player.city,bio:state.player.bio},
+   post:{caption:p.cap,location:p.location,image:p.img},
+   personas:actors.map(personaPack),
+   rules:{count:16,unique:true,adultCharacters:true,boldFlirt:true}
+ },26000);
+ if(!r?.comments?.length)return;
+ let seen=new Set((p.comments||[]).map(c=>c.text.toLowerCase().trim()));
+ let added=0;
+ for(let x of r.comments){
+   let b=actors.find(q=>q.id===x.botId)||state.bots.find(q=>q.handle===x.handle);
+   let text=String(x.text||'').trim();
+   if(!b||!text||seen.has(text.toLowerCase()))continue;
+   seen.add(text.toLowerCase());
+   p.comments.push({id:'ai'+Date.now()+'_'+Math.random().toString(36).slice(2),botId:b.id,user:b.handle,text,replies:[],ai:true});
+   if(typeof x.chemistryDelta==='number')b.chemistry=Math.max(0,Math.min(100,(b.chemistry||0)+x.chemistryDelta));
+   added++;
+ }
+ if(added){
+   state.activity.unshift({time:Date.now(),read:false,text:`AI przeanalizowało post i dodało ${added} kontekstowych reakcji.`});
+   await save();renderFeed();renderProfile();renderActivity();updateActivityDot();
+ }
+}
+async function brainInitiatedDM(b,reason='random'){
+ if(!brainReady())return botInitiatedText(b,reason);
+ let latest=state.posts.filter(p=>p.author==='player').sort((a,c)=>c.created-a.created)[0];
+ let r=await callBrain('initiate_dm',{
+   language:'pl',reason,
+   player:{name:state.player.name,handle:state.player.handle,city:state.player.city,bio:state.player.bio},
+   persona:personaPack(b),history:safeHistory(b.id),
+   latestPost:latest?{caption:latest.cap,location:latest.location,image:latest.img,created:latest.created}:null
+ });
+ return r?.text||botInitiatedText(b,reason);
+}
 function contextSignals(cap){let t=(cap||'').toLowerCase();return{t,place:CITIES.find(c=>t.includes(c.toLowerCase())),hotel:/hotel|szlafrok|room|pokój/.test(t),travel:/wyjazd|podróż|trip|wakac|jutro|ostatni|jedziemy|ruszamy/.test(t),sea:/morze|plaż|beach|makarsk|split|chorwac/.test(t),gym:/trening|gym|siłown|fitness/.test(t),car:/auto|samoch|car|bmw|audi|alfa/.test(t),provocative:/kochani|podobam|hot|sexy|😏|🔥|dziwk|babe/.test(t),hashtag:(t.match(/#[\p{L}\p{N}_]+/gu)||[])[0]||''}}
 function commentPool(cap,b){let s=contextSignals(cap),o=[];
 if(s.place)o.push(`No proszę, ${s.place} i od razu taki materiał 👀`,`Okej, ${s.place} Ci zdecydowanie służy.`,`Czyli dziś rządzisz w ${s.place}?`,`Nie planowałem/am zazdrościć komuś ${s.place}, a jednak.`);
@@ -216,7 +427,7 @@ if(flirty)o.push('Uważaj, bo jeszcze zacznę traktować ten flirt całkiem seri
 if(b.mood==='jealous'&&history.length>3)o.push('A z iloma osobami jeszcze tak dzisiaj piszesz? 👀','Nie wiem, czy chcę wiedzieć, komu jeszcze wysyłasz takie teksty 😏');
 if(mem.includes('spotk')||mem.includes('zapros'))o.push('Tak swoją drogą — pamiętam tę wcześniejszą propozycję spotkania. Nie wycofuj się teraz 😏');
 if(!o.length)o.push('Mów dalej, zaczyna mnie to interesować.','Okej… teraz masz moją uwagę 👀','No proszę. Tego się po Tobie nie spodziewałem/am.','Brzmi podejrzanie dobrze 😏','Dobra, kontynuuj.');
-remember(b,'user',text);let reply=o[Math.floor(Math.random()*o.length)];remember(b,'bot',reply);return reply}
+remember(b,'user',text);let reply=o[Math.floor(Math.random()*o.length)];remember(b,'bot',reply);sentientObserveDM(id,reply,'bot');return reply}
 
 function fmtTime(ts){
  let d=Math.max(1,Date.now()-ts),m=Math.floor(d/60000);
@@ -242,7 +453,7 @@ function maybeBotInitiates(reason='random',count=1){
  candidates.forEach((b,i)=>{
    setTimeout(async()=>{
      state.messages[b.id]=state.messages[b.id]||[];
-     let text=botInitiatedText(b,reason);
+     let text=await brainInitiatedDM(b,reason);
      state.messages[b.id].push({from:'bot',text,time:Date.now(),unread:true});
      state.activity.unshift({time:Date.now(),read:false,text:`@${b.handle} napisał/a do Ciebie: ${text.slice(0,62)}${text.length>62?'…':''}`});
      remember(b,'bot',text); await save(); renderMessages(); renderActivity(); updateActivityDot();
@@ -269,7 +480,8 @@ function socialTick(){
  if(Math.random()<.3) maybeBotInitiates('random',1);
  save(); renderFeed(); renderActivity(); updateActivityDot();
 }
-function updateActivityDot(){
+function updateBrainBadge(){let x=document.getElementById('brainTop');if(x)x.classList.toggle('on',brainReady()&&state.brain.status!=='fallback')}
+function updateActivityDot(){updateBrainBadge();
  let btn=document.querySelector('.topbar button[aria-label="Aktywność"]');
  if(!btn)return;
  let old=btn.querySelector('.notice-dot');
@@ -312,6 +524,565 @@ function showFollowers(type){
  modalBox.innerHTML=`<div class="row"><h3 style="margin:0">${type==='following'?'Obserwujesz':'Obserwujący'}</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="people" style="margin-top:12px">${arr.map(b=>`<div class="person"><img class="avatar" src="${b.avatar}" onclick="openBot('${b.id}')"><div class="grow"><b>@${esc(b.handle)}</b><div class="muted tiny">${esc(b.city)}</div></div><button class="secondary" onclick="openChat('${b.id}')">DM</button></div>`).join('')}</div>`;
  modal.classList.add('show');
 }
+
+function rel(id){if(!state.relationships[id])state.relationships[id]={trust:25+Math.floor(Math.random()*20),jealousy:Math.floor(Math.random()*15),closeness:15+Math.floor(Math.random()*20),tension:Math.floor(Math.random()*10)};return state.relationships[id]}
+function clamp(n){return Math.max(0,Math.min(100,Math.round(n)))}
+function relationshipName(b){let r=rel(b.id),c=b.chemistry||0;if(r.tension>70)return'konflikt';if(r.jealousy>65&&c>45)return'zazdrość';if(c>78&&r.closeness>55)return'bardzo mocna chemia';if(c>55)return'flirt';if(r.closeness>55)return'bliska znajomość';return'znajomość'}
+function worldEvent(text,type='life',actors=[]){state.world.events.unshift({id:'ev'+Date.now()+Math.random(),time:Date.now(),text,type,actors});state.world.events=state.world.events.slice(0,100)}
+function evolveBot(b){let r=rel(b.id),x=Math.random();if(x<.12){let old=b.city,n=CITIES[Math.floor(Math.random()*CITIES.length)];if(n!==old){b.city=n;worldEvent(`@${b.handle} pojechał/a z ${old} do ${n}.`,'travel',[b.id])}}else if(x<.25){let caps=['Mały reset ✨','Wieczór, którego potrzebowałem/am.','Dzisiaj bez planu.','Kilka kadrów z życia.','No i mamy weekend 👀'];state.posts.unshift({id:'wp'+Date.now()+Math.random(),author:b.id,img:imgSeed(b.handle+Date.now(),900),cap:caps[Math.floor(Math.random()*caps.length)],location:b.city,likes:20+Math.floor(Math.random()*900),comments:[],created:Date.now()});worldEvent(`@${b.handle} dodał/a nowy post.`,'post',[b.id])}else if(x<.34){state.stories.unshift({id:'ws'+Date.now()+Math.random(),author:b.id,img:imgSeed('story'+b.handle+Date.now(),900),created:Date.now(),views:80+Math.floor(Math.random()*1400)});worldEvent(`@${b.handle} dodał/a relację.`,'story',[b.id])}r.trust=clamp(r.trust+Math.random()*4-2);r.closeness=clamp(r.closeness+Math.random()*3-1.4)}
+function evolveAIRelationships(){let a=state.bots[Math.floor(Math.random()*state.bots.length)],b=state.bots[Math.floor(Math.random()*state.bots.length)];if(!a||!b||a.id===b.id)return;let x=Math.random();worldEvent(x<.35?`@${a.handle} i @${b.handle} zaczęli częściej pojawiać się razem 👀`:x<.65?`@${a.handle} skomentował/a post @${b.handle}.`:`Między @${a.handle} i @${b.handle} zrobiło się trochę napięcie.` ,x<.65?'social':'drama',[a.id,b.id])}
+function maybeDrama(){let hot=state.bots.filter(b=>(b.chemistry||0)>48);if(!hot.length||Math.random()>.35)return;let b=hot[Math.floor(Math.random()*hot.length)],r=rel(b.id);if(Math.random()<.5){r.jealousy=clamp(r.jealousy+8+Math.random()*12);worldEvent(`@${b.handle} zauważył/a, że dużo rozmawiasz z innymi. Pojawia się zazdrość.`,'drama',[b.id])}else{r.tension=clamp(r.tension+5);worldEvent(`Relacja z @${b.handle} zrobiła się bardziej napięta.`,'drama',[b.id])}}
+function maybeBrandDeal(){if(state.player.followers<800||state.brandDeals.some(d=>d.status==='new')||Math.random()>.22)return;let brands=['NOVA Wear','LUMÉ Cosmetics','VANTA Travel','Pulse Energy','NOIR Studio','Veloce','AURA Skin'],brand=brands[Math.floor(Math.random()*brands.length)],base=Math.max(80,Math.floor(state.player.followers*.018)),d={id:'deal'+Date.now(),brand,fee:base+Math.floor(Math.random()*base),deliverable:['1 post + 2 Stories','1 Reel','3 Stories','1 post'][Math.floor(Math.random()*4)],status:'new',created:Date.now()};state.brandDeals.unshift(d);state.activity.unshift({time:Date.now(),read:false,text:`${brand} wysłało propozycję współpracy za ${d.fee} €.`});worldEvent(`${brand} zainteresowało się Twoim profilem.`,'brand',[])}
+function livingWorldTick(force=false){if(!state?.initialized)return;let now=Date.now(),last=state.world.lastTick||0;if(!force&&now-last<120000)return;state.world.lastTick=now;state.world.day=1+Math.floor((now-state.created)/86400000);shuffle(state.bots).slice(0,2+Math.floor(Math.random()*3)).forEach(evolveBot);if(Math.random()<.55)evolveAIRelationships();maybeDrama();maybeBrandDeal();state.player.followers=Math.max(0,state.player.followers+Math.floor(Math.random()*13)-2);state.creatorLevel=Math.max(1,Math.floor(Math.log10(Math.max(10,state.player.followers))*2)-2);save();renderWorld();renderStories();renderActivity();updateActivityDot()}
+function renderWorld(){if(!document.getElementById('worldSummary'))return;worldDay.textContent='Dzień '+state.world.day;worldSummary.innerHTML=`<div class="stats" style="margin-top:12px"><div><b>${state.creatorLevel}</b><div class="muted">poziom twórcy</div></div><div><b>${state.world.events.length}</b><div class="muted">wydarzeń</div></div><div><b>${state.closeFriends.length}</b><div class="muted">Close Friends</div></div></div><div class="worldcard"><b>Świat żyje sam</b><div class="muted tiny" style="margin-top:5px">Postacie podróżują, publikują, wchodzą w relacje i tworzą dramę.</div><button class="secondary" style="margin-top:9px" onclick="livingWorldTick(true)">Przesuń symulację</button></div>`;worldEvents.innerHTML=state.world.events.slice(0,30).map(e=>`<div class="event">${e.type==='drama'?'⚡':e.type==='brand'?'💼':e.type==='travel'?'✈️':'●'} ${esc(e.text)}<div class="muted tiny">${fmtTime(e.time)}</div></div>`).join('')||'<div class="muted">Świat dopiero się rozkręca.</div>';brandDeals.innerHTML=state.brandDeals.slice(0,12).map(d=>`<div class="deal"><div class="row"><b>${esc(d.brand)}</b><span class="spacer"></span><b>${d.fee} €</b></div><div class="muted">${esc(d.deliverable)}</div>${d.status==='new'?`<div class="row" style="margin-top:8px"><button class="primary grow" onclick="dealAction('${d.id}','accepted')">Akceptuj</button><button class="secondary grow" onclick="negotiateDeal('${d.id}')">Negocjuj</button><button class="secondary grow" onclick="dealAction('${d.id}','rejected')">Odrzuć</button></div>`:`<span class="badge">${d.status==='accepted'?'Przyjęta':'Odrzucona'}</span>`}</div>`).join('')||'<div class="muted">Na razie brak ofert.</div>'}
+function dealAction(id,status){let d=state.brandDeals.find(x=>x.id===id);if(!d)return;d.status=status;if(status==='accepted'){state.player.reach+=1000+Math.floor(Math.random()*4000);state.player.followers+=30+Math.floor(Math.random()*150);state.wallet=state.wallet||{balance:0,history:[]};state.wallet.balance+=d.fee;state.wallet.history.unshift({brand:d.brand,amount:d.fee,time:Date.now()});worldEvent(`Przyjąłeś/aś współpracę z ${d.brand}.`,'brand',[])}save();renderWorld();renderProfile()}
+function toggleCloseFriend(id){let i=state.closeFriends.indexOf(id);if(i>=0)state.closeFriends.splice(i,1);else state.closeFriends.push(id);save();openBot(id)}
+function showRelationship(id){let b=bot(id),r=rel(id);modalBox.innerHTML=`<div class="row"><h3 style="margin:0">@${esc(b.handle)} · ${relationshipName(b)}</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="relationship-grid">${[['Chemia',b.chemistry||0],['Bliskość',r.closeness],['Zaufanie',r.trust],['Zazdrość',r.jealousy],['Napięcie',r.tension],['Affinity',b.affinity||0]].map(x=>`<div class="panel"><b>${x[0]}</b><div class="meter"><i style="width:${x[1]}%"></i></div><div class="muted tiny">${Math.round(x[1])}/100</div></div>`).join('')}</div><div class="worldcard"><b>Pamięć</b>${(b.memory||[]).slice(-6).reverse().map(m=>`<div class="event">${m.image?`<img src="${m.image}" style="max-width:220px;border-radius:12px;display:block;margin-bottom:5px">`:''}${esc(m.text)}</div>`).join('')||'<div class="muted tiny">Jeszcze brak wspólnych wspomnień.</div>'}</div>`;modal.classList.add('show')}
+function createGroup(){let people=shuffle(state.bots.filter(b=>!state.blockedIds.includes(b.id))).slice(0,3),g={id:'g'+Date.now(),name:'Ekipa '+(state.groups.length+1),members:people.map(x=>x.id),messages:[]};state.groups.push(g);save();openGroup(g.id)}
+function openGroup(id){let g=state.groups.find(x=>x.id===id);if(!g)return;modalBox.innerHTML=`<div class="row"><div class="groupavatars">${g.members.map(x=>`<img src="${bot(x).avatar}">`).join('')}</div><b>${esc(g.name)}</b><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div id="glog" class="chatlog">${g.messages.map(m=>`<div class="msg ${m.from==='me'?'me':'bot'}"><b class="tiny">${m.from==='me'?'Ty':'@'+bot(m.from).handle}</b><br>${m.image?`<img src="${m.image}" style="max-width:220px;border-radius:12px;display:block;margin-bottom:5px">`:''}${esc(m.text)}</div>`).join('')}</div><div class="composer"><input id="ginput" placeholder="Napisz do grupy..."><button class="iconbtn" onclick="sendGroup('${id}')">➤</button></div>`;modal.classList.add('show')}
+async function sendGroup(id){let g=state.groups.find(x=>x.id===id),inp=document.getElementById('ginput'),t=inp.value.trim();if(!t)return;g.messages.push({from:'me',text:t,time:Date.now()});inp.value='';await save();openGroup(id);for(let bid of shuffle(g.members).slice(0,1+Math.floor(Math.random()*2))){let b=bot(bid);setTimeout(async()=>{let tx=brainReady()?await cloudDM(b,`Wiadomość w czacie grupowym "${g.name}": ${t}`):dmReply(b,t);g.messages.push({from:bid,text:tx,time:Date.now()});await save();openGroup(id)},700+Math.random()*1300)}}
+function showGroups(){modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Grupy</h3><span class="spacer"></span><button class="primary" onclick="createGroup()">+ Nowa</button><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="people">${state.groups.map(g=>`<div class="person" onclick="openGroup('${g.id}')"><div class="groupavatars">${g.members.slice(0,3).map(x=>`<img src="${bot(x).avatar}">`).join('')}</div><div class="grow"><b>${esc(g.name)}</b><div class="muted tiny">${g.members.length+1} osoby</div></div></div>`).join('')||'<p class="muted">Nie masz jeszcze grup.</p>'}</div>`;modal.classList.add('show')}
+function addStoryPoll(){let q=prompt('Pytanie do ankiety:');if(!q)return;let a=prompt('Opcja 1:','Tak'),b=prompt('Opcja 2:','Nie');if(!a||!b)return;state.storyPolls=state.storyPolls||[];state.storyPolls.unshift({id:'poll'+Date.now(),question:q,options:[{text:a,votes:Math.floor(Math.random()*100)},{text:b,votes:Math.floor(Math.random()*100)}],created:Date.now()});save();toast('Ankieta dodana')}
+
+function ensureV9(){
+ state.coreCast=state.coreCast||[];
+ state.secrets=state.secrets||{};state.goals=state.goals||{};state.notes=state.notes||[];
+ state.followRequests=state.followRequests||[];state.fanpages=state.fanpages||[];state.achievements=state.achievements||[];
+ state.wallet=state.wallet||{balance:0,history:[]};state.reputation=state.reputation??50;state.interestProfile=state.interestProfile||{};
+ state.viral=state.viral||{};state.mentions=state.mentions||[];state.collabs=state.collabs||[];state.offlineSummary=state.offlineSummary||[];
+ if(!state.coreCast.length){
+   state.coreCast=shuffle(state.bots).slice(0,20).map(b=>b.id);
+   state.coreCast.forEach((id,i)=>{let b=bot(id);b.age=18+(i%12);b.job=['fotograf','studentka','DJ','grafik','trenerka','podróżniczka','barista','modelka','programista','tatuażystka'][i%10];b.online=Math.random()>.35;b.lastSeen=Date.now()-Math.floor(Math.random()*7200000);b.private=i%7===0;state.goals[id]=['rozwinąć konto','więcej podróżować','znaleźć relację','zrobić viral','poznać nowych ludzi','zmienić pracę'][i%6];state.secrets[id]=`Sekret ${b.handle}: ${['boi się odrzucenia','planuje wyprowadzkę','ma ukryty konflikt z inną osobą','od dawna chce zmienić branżę','ma słabość do spontanicznych wyjazdów'][i%5]}.`;});
+ }
+}
+function achievement(id,title,desc){
+ if(state.achievements.some(a=>a.id===id))return;
+ state.achievements.unshift({id,title,desc,time:Date.now()});state.activity.unshift({time:Date.now(),read:false,text:`🏆 Osiągnięcie: ${title}`});
+}
+function checkAchievements(){
+ if(state.player.followers>=1000)achievement('f1k','Pierwszy 1K','Przekroczono 1000 followersów.');
+ if(state.player.followers>=10000)achievement('f10k','10K followers','Konto weszło na wyższy poziom.');
+ if(state.brandDeals.some(d=>d.status==='accepted'))achievement('brand1','Pierwsza współpraca','Zaakceptowano pierwszą ofertę marki.');
+ if(Object.values(state.viral).some(v=>v.stage>=3))achievement('viral1','Pierwszy viral','Jeden z postów wystrzelił ponad normę.');
+ if(state.groups.length)achievement('group1','Ekipa','Utworzono pierwszy grupowy DM.');
+}
+function rememberInterest(key,delta=1){if(!key)return;state.interestProfile[key]=(state.interestProfile[key]||0)+delta}
+function updateInterestFromPost(p){
+ if(p.location)rememberInterest('loc:'+p.location,2);
+ ((p.cap||'').match(/#[\p{L}\p{N}_]+/gu)||[]).forEach(h=>rememberInterest(h.toLowerCase(),2));
+}
+function makeNote(b){return {id:'n'+Date.now()+Math.random(),botId:b.id,text:['kto dziś wychodzi?','potrzebuję kawy ☕','mam ochotę zniknąć na weekend','kto też nie śpi? 👀','dzisiaj tylko dobre decyzje 😏','spontan > plan'][Math.floor(Math.random()*6)],time:Date.now()}}
+function refreshNotes(){state.notes=state.notes.filter(n=>Date.now()-n.time<86400000);shuffle(state.bots).slice(0,3).forEach(b=>{if(!state.notes.some(n=>n.botId===b.id)&&Math.random()<.45)state.notes.unshift(makeNote(b))})}
+function simulatePrivateFollow(){
+ let b=shuffle(state.bots.filter(x=>x.private&&!state.followRequests.some(r=>r.botId===x.id))).at(0);
+ if(b&&Math.random()<.25){state.followRequests.unshift({botId:b.id,status:'pending',time:Date.now()});state.activity.unshift({time:Date.now(),read:false,text:`Wysłano prośbę o obserwowanie @${b.handle}.`})}
+}
+function resolveFollowRequests(){
+ state.followRequests.filter(r=>r.status==='pending'&&Date.now()-r.time>60000).forEach(r=>{r.status=Math.random()<.82?'accepted':'rejected';let b=bot(r.botId);if(r.status==='accepted'){if(!state.followingIds.includes(b.id))state.followingIds.push(b.id);state.activity.unshift({time:Date.now(),read:false,text:`@${b.handle} zaakceptował/a Twoją prośbę.`})}else state.activity.unshift({time:Date.now(),read:false,text:`@${b.handle} odrzucił/a prośbę o obserwowanie.`})})
+}
+function aiMayUnfollow(){
+ if(Math.random()>.15)return;
+ let candidates=state.bots.filter(b=>rel(b.id).tension>55||rel(b.id).trust<12);
+ if(!candidates.length)return;let b=candidates[Math.floor(Math.random()*candidates.length)];
+ state.activity.unshift({time:Date.now(),read:false,text:`@${b.handle} przestał/a Cię obserwować.`});worldEvent(`@${b.handle} zrobił/a unfollow po ostatnich napięciach.`,'drama',[b.id])
+}
+function createFanpage(){
+ if(state.player.followers<5000||state.fanpages.length||Math.random()>.18)return;
+ let fp={id:'fan'+Date.now(),handle:(state.player.handle||'creator')+'_daily',followers:80+Math.floor(Math.random()*900),created:Date.now()};
+ state.fanpages.push(fp);worldEvent(`Powstał fanpage @${fp.handle}.`,'social',[]);state.activity.unshift({time:Date.now(),read:false,text:`Powstał fanpage @${fp.handle} poświęcony Twojemu profilowi.`})
+}
+function maybeVerify(){
+ if(state.player.followers>=20000&&!state.player.verified){state.player.verified=true;achievement('verified','Weryfikacja','Konto otrzymało oznaczenie zweryfikowanego profilu.')}
+}
+function viralTick(){
+ state.posts.filter(p=>p.author==='player').forEach(p=>{
+   let v=state.viral[p.id]||(state.viral[p.id]={momentum:Math.random()*1.4,stage:0,last:Date.now()});
+   if(Date.now()-v.last<45000)return;v.last=Date.now();
+   let boost=Math.floor((5+Math.random()*35)*(1+v.momentum));
+   if(Math.random()<.12)v.momentum+=.8+Math.random()*1.8; else v.momentum=Math.max(.1,v.momentum-.08);
+   p.likes+=boost;state.player.reach+=boost*(2+Math.floor(Math.random()*4));
+   if(boost>55){v.stage++;state.player.followers+=Math.floor(boost/8);worldEvent(`Twój post łapie rozpęd: +${boost} polubień w krótkim czasie.`,'viral',[])}
+ });
+}
+function reputationTick(){
+ let drama=state.world.events.slice(0,20).filter(e=>e.type==='drama').length;
+ state.reputation=clamp(state.reputation + (Math.random()*4-2) - drama*.08);
+}
+function maybeSecretReveal(b){
+ let r=rel(b.id);if(r.trust>65&&r.closeness>55&&!b.secretRevealed&&state.secrets[b.id]){b.secretRevealed=true;state.activity.unshift({time:Date.now(),read:false,text:`@${b.handle} zaufał/a Ci na tyle, żeby powiedzieć coś prywatnego.`});remember(b,'bot',state.secrets[b.id])}
+}
+function offlineProgress(){
+ ensureV9();let now=Date.now(),elapsed=now-(state.lastOpened||now);if(elapsed<180000)return;
+ let hours=Math.min(24,Math.max(1,Math.floor(elapsed/3600000))),summary=[];
+ let posts=0,stories=0,msgs=0,follows=0;
+ for(let i=0;i<Math.min(12,hours*2);i++){
+   let b=state.bots[Math.floor(Math.random()*state.bots.length)],x=Math.random();
+   if(x<.28){evolveBot(b);posts++}else if(x<.48){state.stories.unshift({id:'off'+Date.now()+Math.random(),author:b.id,img:imgSeed('off'+Math.random(),900),created:now-Math.floor(Math.random()*elapsed),views:100+Math.floor(Math.random()*1500)});stories++}else if(x<.63){state.messages[b.id]=state.messages[b.id]||[];let t=botInitiatedText(b,'random');state.messages[b.id].push({from:'bot',text:t,time:now-Math.floor(Math.random()*elapsed),unread:true});msgs++}else{state.player.followers+=Math.floor(Math.random()*12);follows+=Math.floor(Math.random()*12)}
+ }
+ summary.push(`Podczas Twojej nieobecności (${hours} godz.) świat działał dalej.`);
+ if(posts)summary.push(`${posts} główne zdarzenia/posty pojawiły się w świecie.`);
+ if(stories)summary.push(`${stories} nowe Stories.`);
+ if(msgs)summary.push(`${msgs} nowe wiadomości DM.`);
+ if(follows)summary.push(`Około ${follows} nowych followersów.`);
+ state.offlineSummary=summary;state.activity.unshift({time:now,read:false,text:'Masz nowe podsumowanie: „Co mnie ominęło?”'});state.lastOpened=now;
+}
+function showOfflineSummary(){
+ ensureV9();modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Co mnie ominęło?</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div>${(state.offlineSummary.length?state.offlineSummary:['Od ostatniego wejścia nie wydarzyło się jeszcze nic większego.']).map(x=>`<div class="summarycard">${esc(x)}</div>`).join('')}`;modal.classList.add('show')
+}
+function persistentTick(){
+ if(!state?.initialized)return;ensureV9();refreshNotes();resolveFollowRequests();simulatePrivateFollow();aiMayUnfollow();createFanpage();maybeVerify();viralTick();reputationTick();state.coreCast.map(bot).filter(Boolean).forEach(maybeSecretReveal);checkAchievements();save();renderPersistent();renderProfile();renderActivity()
+}
+function renderPersistent(){
+ if(!document.getElementById('persistentSummary'))return;ensureV9();
+ persistentSummary.innerHTML=`<div class="stats" style="margin-top:12px"><div><b>${state.player.followers}</b><div class="muted">followers</div></div><div><b>${state.reputation}</b><div class="muted">reputacja</div></div><div><b>${state.wallet.balance} €</b><div class="muted">zarobione</div></div></div><div class="worldcard"><b>Notatki</b><div style="display:flex;gap:7px;overflow:auto;margin-top:9px">${state.notes.slice(0,10).map(n=>{let b=bot(n.botId);return `<div class="notechip" onclick="openChat('${b.id}')">@${esc(b.handle)} · ${esc(n.text)}</div>`}).join('')||'<span class="muted">Brak nowych notatek.</span>'}</div></div>`;
+ coreCastList.innerHTML=state.coreCast.slice(0,20).map(id=>{let b=bot(id),r=rel(id);return `<div class="castcard" onclick="openBot('${id}')"><div class="row"><img class="avatar" src="${b.avatar}"><div class="grow"><b>@${esc(b.handle)} ${b.online?'<span class="statusdot"></span>':''}</b><div class="muted tiny">${b.age||18} · ${esc(b.job||'twórca')} · ${esc(b.city)}</div><div class="muted tiny">Cel: ${esc(state.goals[id]||'żyć ciekawiej')}</div></div><span class="badge">${relationshipName(b)}</span></div>${b.secretRevealed?`<div class="secret">🔐 ${esc(state.secrets[id])}</div>`:''}</div>`}).join('');
+ let trends=Object.entries(state.interestProfile).sort((a,b)=>b[1]-a[1]).slice(0,8);
+ if(!trends.length)trends=[['#travel',12],['#nightlife',9],['#style',7]];
+ trendsList.innerHTML=trends.map((x,i)=>`<div class="trend"><b>${i+1}. ${esc(x[0])}</b><span class="muted">${x[1]*137} interakcji</span></div>`).join('');
+ achievementsList.innerHTML=state.achievements.slice(0,12).map(a=>`<div class="achievement">🏆 <b>${esc(a.title)}</b><div class="muted tiny">${esc(a.desc)}</div></div>`).join('')||'<div class="muted">Pierwsze osiągnięcia pojawią się podczas rozwoju konta.</div>';
+}
+function negotiateDeal(id){
+ let d=state.brandDeals.find(x=>x.id===id);if(!d)return;let ask=prompt('Twoja proponowana stawka (€):',Math.round(d.fee*1.25));if(!ask)return;let n=parseInt(ask);if(!n)return;
+ let max=d.fee*1.45;if(n<=max){d.fee=n;d.status='accepted';state.wallet.balance+=n;state.wallet.history.unshift({brand:d.brand,amount:n,time:Date.now()});state.activity.unshift({time:Date.now(),read:false,text:`${d.brand} zaakceptowało negocjowaną stawkę ${n} €.`})}else{d.status='rejected';state.activity.unshift({time:Date.now(),read:false,text:`${d.brand} odrzuciło stawkę ${n} €.`})}save();renderWorld();renderPersistent()
+}
+function mentionBotInPost(id){let b=bot(id);state.mentions.unshift({botId:id,time:Date.now()});remember(b,'user','Oznaczenie @'+b.handle+' w poście');state.activity.unshift({time:Date.now(),read:false,text:`Oznaczyłeś/aś @${b.handle} w poście.`});setTimeout(()=>maybeBotInitiates('post',1),900);save()}
+function createCollab(id){let b=bot(id),c={id:'collab'+Date.now(),botId:id,status:Math.random()<.8?'accepted':'pending',time:Date.now()};state.collabs.unshift(c);state.activity.unshift({time:Date.now(),read:false,text:`Zaproszenie Collab wysłane do @${b.handle}.`});save();toast(c.status==='accepted'?'Collab zaakceptowany':'Zaproszenie wysłane')}
+
+function ensureV10(){
+ ensureV9();state.socialGraph=state.socialGraph||{};state.calendar=state.calendar||[];state.liveSessions=state.liveSessions||[];state.broadcast=state.broadcast||[];state.generatedMedia=state.generatedMedia||[];state.worldClock=state.worldClock||{lastServerSync:0};state.creatorCareer=state.creatorCareer||{xp:0,tier:'Rising Creator',manager:false};
+ if(!Object.keys(state.socialGraph).length){
+  let cast=state.coreCast.slice(0,20);
+  cast.forEach((id,i)=>{state.socialGraph[id]={};for(let j=0;j<cast.length;j++){if(i===j)continue;let x=Math.random(),type=x<.08?'ex':x<.22?'friend':x<.29?'conflict':x<.36?'flirt':'acquaintance';state.socialGraph[id][cast[j]]={type,strength:15+Math.floor(Math.random()*75),knowsPrivate:false}}});
+ }
+ if(!state.calendar.length){
+  let now=Date.now();['Impreza w centrum','Sesja zdjęciowa','Weekendowy wyjazd','Koncert','Urodziny','Creator Event'].forEach((title,i)=>state.calendar.push({id:'cal'+i,title,time:now+(i+1)*86400000+Math.floor(Math.random()*18000000),city:CITIES[i%CITIES.length],actors:shuffle(state.coreCast).slice(0,2+(i%3)),status:'planned'}));
+ }
+}
+function simHour(){return new Date().getHours()}
+function botAvailability(b){
+ let h=simHour();if(h>=1&&h<7)return Math.random()<.08?'online':'sleeping';
+ if(b.job&&h>=8&&h<16)return Math.random()<.35?'busy':'online';
+ return Math.random()<.72?'online':'away';
+}
+function updatePresence(){state.coreCast.forEach(id=>{let b=bot(id);if(!b)return;let s=botAvailability(b);b.online=s==='online';b.presence=s;if(!b.online)b.lastSeen=Date.now()-Math.floor(Math.random()*3600000)})}
+function graphEdge(a,b){return state.socialGraph?.[a]?.[b]||null}
+function spreadInformation(sourceId,info,privateInfo=false){
+ let edges=state.socialGraph[sourceId]||{};Object.entries(edges).filter(([_,e])=>e.strength>45&&e.type!=='conflict').slice(0,3).forEach(([id,e])=>{if(privateInfo&&Math.random()>.18)return;let b=bot(id);if(!b)return;remember(b,'world',`Dowiedział/a się od @${bot(sourceId)?.handle||'kogoś'}: ${info}`);e.knowsPrivate=privateInfo;worldEvent(`Informacja przeszła od @${bot(sourceId)?.handle} do @${b.handle}.`,'rumor',[sourceId,id])})
+}
+function processCalendar(){
+ ensureV10();let now=Date.now();state.calendar.filter(e=>e.status==='planned'&&e.time<=now).forEach(e=>{e.status='done';worldEvent(`${e.title} · ${e.city} właśnie się odbyło.`,'event',e.actors);e.actors.forEach(id=>{let b=bot(id);if(!b)return;state.stories.unshift({id:'evt'+Date.now()+Math.random(),author:id,img:imgSeed(e.title+b.handle+Date.now(),900),created:Date.now(),views:200+Math.floor(Math.random()*1800)});remember(b,'world',`Był/a na wydarzeniu: ${e.title} w ${e.city}`)});if(e.actors.length>1)spreadInformation(e.actors[0],`spotkanie na wydarzeniu ${e.title}`,false)})
+}
+function createCharacterMedia(b,reason='life'){
+ let place=b.city||'miasto',captions=[`Dzisiaj ${place} ✨`,`Mały update z ${place}.`,`Tak wygląda mój dzień.`,`Bez większego planu 📸`,`Zostawiam to tutaj.`];
+ let m={id:'media'+Date.now()+Math.random(),botId:b.id,reason,prompt:`consistent social media photo of ${b.name}, ${b.age||18}+ adult, ${b.job||'creator'}, in ${place}, ${reason}`,img:imgSeed('consistent-'+b.id+'-'+reason+'-'+Math.floor(Date.now()/86400000),900),caption:captions[Math.floor(Math.random()*captions.length)],time:Date.now(),generated:false};
+ state.generatedMedia.unshift(m);state.generatedMedia=state.generatedMedia.slice(0,40);return m
+}
+async function requestCharacterImage(b,reason='life'){
+ if(!brainReady())return createCharacterMedia(b,reason);
+ let r=await callBrain('character_image',{persona:personaPack(b),reason,city:b.city,visualIdentity:{avatar:b.avatar}},30000);
+ if(r?.image){let m={id:'media'+Date.now(),botId:b.id,reason,img:r.image,caption:r.caption||'',time:Date.now(),generated:true};state.generatedMedia.unshift(m);return m}
+ return createCharacterMedia(b,reason)
+}
+async function sendPhotoDM(id){
+ let b=bot(id);if(!b)return;let m=await requestCharacterImage(b,'private casual selfie for DM');state.messages[id]=state.messages[id]||[];state.messages[id].push({from:'bot',text:m.caption||'mały update 👀',image:m.img,time:Date.now(),unread:activeChat!==id});remember(b,'bot','Wysłał/a zdjęcie w DM');save();if(activeChat===id)openChat(id);else renderMessages()
+}
+function maybeCharacterPhoto(){
+ if(Math.random()>.18)return;let b=bot(state.coreCast[Math.floor(Math.random()*state.coreCast.length)]);if(!b)return;let m=createCharacterMedia(b,['coffee','night out','travel','work','gym','weekend'][Math.floor(Math.random()*6)]);state.posts.unshift({id:'gm'+Date.now(),author:b.id,img:m.img,cap:m.caption,location:b.city,likes:30+Math.floor(Math.random()*1400),comments:[],created:Date.now()});worldEvent(`@${b.handle} opublikował/a nowy kadr z życia.`,'media',[b.id])
+}
+function careerTick(){
+ let f=state.player.followers,xp=Math.floor(f/100)+state.brandDeals.filter(d=>d.status==='accepted').length*100+state.achievements.length*50;state.creatorCareer.xp=xp;
+ state.creatorCareer.tier=f>=100000?'Top Creator':f>=25000?'Established Creator':f>=5000?'Growing Creator':'Rising Creator';
+ if(f>=25000&&!state.creatorCareer.manager){state.creatorCareer.manager=true;state.activity.unshift({time:Date.now(),read:false,text:'Agencja creatorska zaproponowała Ci współpracę z managerem.'})}
+}
+function realityTick(){
+ if(!state?.initialized)return;ensureV10();updatePresence();processCalendar();maybeCharacterPhoto();careerTick();
+ if(Math.random()<.15){let a=state.coreCast[Math.floor(Math.random()*state.coreCast.length)],b=state.coreCast[Math.floor(Math.random()*state.coreCast.length)];if(a&&b&&a!==b){let e=graphEdge(a,b);if(e){e.strength=clamp(e.strength+(Math.random()*12-5));if(e.type==='conflict'&&e.strength>70)worldEvent(`Konflikt @${bot(a).handle} ↔ @${bot(b).handle} znowu wypłynął publicznie.`,'drama',[a,b])}}}
+ save();renderReality();renderStories();renderFeed()
+}
+function renderReality(){
+ if(!document.getElementById('realitySummary'))return;ensureV10();realityClock.textContent=new Date().toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit'});
+ realitySummary.innerHTML=`<div class="stats" style="margin-top:12px"><div><b>${state.creatorCareer.tier}</b><div class="muted">kariera</div></div><div><b>${state.creatorCareer.xp}</b><div class="muted">XP</div></div><div><b>${state.creatorCareer.manager?'✓':'—'}</b><div class="muted">manager</div></div></div><div class="livebox"><b>LIVE</b><div class="muted tiny">Uruchom transmisję. AI będzie wchodzić, wychodzić i komentować zgodnie z relacjami.</div><button class="primary" style="margin-top:9px" onclick="startLive()">Rozpocznij Live</button><button class="secondary" style="margin-top:9px" onclick="openBroadcast()">Kanał nadawczy</button></div>`;
+ calendarList.innerHTML=state.calendar.slice().sort((a,b)=>a.time-b.time).slice(0,10).map(e=>`<div class="eventcard"><b>${esc(e.title)}</b><div class="muted tiny">${new Date(e.time).toLocaleString('pl-PL')} · ${esc(e.city)} · ${e.status==='done'?'zakończone':'planowane'}</div><div class="muted tiny">${e.actors.map(id=>'@'+bot(id).handle).join(', ')}</div></div>`).join('');
+ graphList.innerHTML=state.coreCast.slice(0,8).map(id=>{let b=bot(id),links=Object.values(state.socialGraph[id]||{}),friends=links.filter(x=>x.type==='friend').length,conf=links.filter(x=>x.type==='conflict').length;return `<div class="graphrow" onclick="showSocialGraph('${id}')"><img class="avatar" src="${b.avatar}"><div><b>@${esc(b.handle)}</b><div class="muted tiny">${friends} bliskich · ${conf} konfliktów · ${b.presence||'away'}</div></div><span>›</span></div>`}).join('');
+ generatedMediaList.innerHTML=state.generatedMedia.slice(0,6).map(m=>{let b=bot(m.botId);return `<div class="media-card"><img src="${m.img}"><div style="padding:9px"><b>@${esc(b.handle)}</b> ${esc(m.caption||'')}<div class="muted tiny">${m.generated?'AI image':'symulowany kadr'}</div></div></div>`}).join('')||'<div class="muted">Nowe media postaci pojawią się wraz z życiem świata.</div>'
+}
+function showSocialGraph(id){
+ let b=bot(id),edges=Object.entries(state.socialGraph[id]||{}).sort((a,b)=>b[1].strength-a[1].strength).slice(0,15);
+ modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Sieć @${esc(b.handle)}</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div>${edges.map(([oid,e])=>{let o=bot(oid);return `<div class="graphrow" onclick="openBot('${oid}')"><img class="avatar" src="${o.avatar}"><div><b>@${esc(o.handle)}</b><div class="muted tiny">${e.type} · siła ${e.strength}/100</div></div><span>${e.knowsPrivate?'🔐':''}</span></div>`}).join('')}`;modal.classList.add('show')
+}
+function startLive(){
+ let s={id:'live'+Date.now(),started:Date.now(),viewers:shuffle(state.bots).slice(0,8+Math.floor(Math.random()*18)).map(b=>b.id),comments:[]};state.liveSessions.unshift(s);
+ let pool=s.viewers.slice(0,10);pool.forEach((id,i)=>{let b=bot(id);setTimeout(()=>{s.comments.push({botId:id,text:commentPool('live teraz',b)[0]||'👀',time:Date.now()});if(document.getElementById('liveComments'))renderLive(s.id)},400+i*350)});
+ renderLive(s.id)
+}
+function renderLive(id){
+ let s=state.liveSessions.find(x=>x.id===id);if(!s)return;modalBox.innerHTML=`<div class="row"><b>🔴 LIVE · ${s.viewers.length} ogląda</b><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="livebox" style="height:240px;display:grid;place-items:center"><div style="text-align:center"><div style="font-size:44px">📱</div><b>Twoja transmisja</b></div></div><div id="liveComments" class="livecomments">${s.comments.map(c=>`<div class="livecomment"><b>@${bot(c.botId).handle}</b> ${esc(c.text)}</div>`).join('')}</div><div class="composer"><input id="liveInput" placeholder="Napisz do widzów..."><button class="iconbtn" onclick="liveSay('${id}')">➤</button></div>`;modal.classList.add('show')
+}
+function liveSay(id){let s=state.liveSessions.find(x=>x.id===id),i=document.getElementById('liveInput');if(!i?.value.trim())return;s.comments.push({botId:'me',text:i.value.trim(),time:Date.now()});i.value='';save();renderLive(id)}
+function openBroadcast(){
+ modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Kanał nadawczy</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div>${state.broadcast.map(x=>`<div class="event"><b>Ty</b> ${esc(x.text)} <span class="muted tiny">❤️ ${x.reactions}</span></div>`).join('')||'<div class="muted">Jeszcze nic nie opublikowano.</div>'}</div><div class="composer"><input id="bcInput" placeholder="Wiadomość do followersów..."><button class="iconbtn" onclick="broadcastSend()">➤</button></div>`;modal.classList.add('show')
+}
+function broadcastSend(){let i=document.getElementById('bcInput'),t=i?.value.trim();if(!t)return;state.broadcast.unshift({text:t,time:Date.now(),reactions:Math.floor(state.player.followers*(.01+Math.random()*.08))});i.value='';save();openBroadcast()}
+
+function ensureV11(){
+  ensureV10();
+  state.sentient=state.sentient||{};
+  state.sentient.worldDirector=state.sentient.worldDirector||{enabled:true,lastRun:0,arcCooldown:0};
+  state.sentient.facts=state.sentient.facts||{};
+  state.sentient.episodes=state.sentient.episodes||{};
+  state.sentient.promises=state.sentient.promises||[];
+  state.sentient.arcs=state.sentient.arcs||[];
+  state.sentient.importance=state.sentient.importance||{};
+  state.sentient.notificationQueue=state.sentient.notificationQueue||[];
+  state.sentient.recap=state.sentient.recap||null;
+  state.sentient.lastDirectorSummary=state.sentient.lastDirectorSummary||'';
+  state.coreCast.forEach((id,i)=>{
+    let b=bot(id); if(!b)return;
+    b.dna=b.dna||{
+      tone:['ciepły','zadziorny','suchy','bezpośredni','ironiczny','spokojny'][i%6],
+      humor:['sarkazm','suchary','flirt','memiczny','subtelny'][i%5],
+      punctuation:['krótkie wiadomości','pełne zdania','mało kropek','dużo emoji'][i%4],
+      initiative:30+(i*7)%65,
+      jealousy:20+(i*11)%70,
+      boundaries:['ostrożne','normalne','odważne'][i%3],
+      publicPersona:['otwarta','cool','grzeczna','pewna siebie'][i%4],
+      privatePersona:['cieplejsza','bardziej bezpośrednia','flirtująca','zdystansowana'][i%4],
+      emojis:[['😏','🔥'],['😂','😭'],['🖤','✨'],['👀','😌']][i%4]
+    };
+    if(state.sentient.importance[id]==null) state.sentient.importance[id]=50+(state.coreCast.length-i);
+    state.sentient.facts[id]=state.sentient.facts[id]||[];
+    state.sentient.episodes[id]=state.sentient.episodes[id]||[];
+  });
+}
+function addFact(id,text,source='interaction'){
+  ensureV11(); if(!text)return;
+  let arr=state.sentient.facts[id]||[];
+  if(arr.some(x=>x.text===text))return;
+  arr.push({text,source,time:Date.now(),confidence:.85}); state.sentient.facts[id]=arr.slice(-40);
+}
+function addEpisode(id,text,emotion='neutral',weight=50){
+  ensureV11(); let arr=state.sentient.episodes[id]||[];
+  arr.push({text,emotion,weight,time:Date.now()}); state.sentient.episodes[id]=arr.slice(-50);
+  state.sentient.importance[id]=Math.min(100,(state.sentient.importance[id]||40)+Math.max(1,Math.round(weight/20)));
+}
+function promiseAdd(botId,text,due,kind='reply'){
+  ensureV11(); if(!botId||!text)return;
+  state.sentient.promises.push({id:'pr'+Date.now()+Math.random(),botId,text,due:due||Date.now()+3600000,kind,status:'open',created:Date.now()});
+  state.sentient.promises=state.sentient.promises.slice(-60);
+}
+function parsePromiseFromText(botId,text,from='bot'){
+  if(!text)return;
+  let t=text.toLowerCase();
+  let due=null;
+  if(/jutro rano/.test(t))due=Date.now()+12*3600000;
+  else if(/jutro/.test(t))due=Date.now()+24*3600000;
+  else if(/wieczorem/.test(t))due=Date.now()+6*3600000;
+  else if(/później|za chwilę|odezwę się/.test(t))due=Date.now()+90*60000;
+  if(due && /odezw|napisz|wróc|dam znać|pogadamy|zobaczymy się/.test(t))promiseAdd(botId,text,due,from==='bot'?'bot_promise':'user_plan');
+}
+function processPromises(){
+  ensureV11(); let now=Date.now();
+  state.sentient.promises.filter(p=>p.status==='open'&&p.due<=now).forEach(p=>{
+    let b=bot(p.botId); if(!b){p.status='expired';return}
+    p.status='fulfilled';
+    if(p.kind==='bot_promise'){
+      state.messages[p.botId]=state.messages[p.botId]||[];
+      let msg=`Mówiłem/am, że się odezwę. ${['Jak tam?','Co robisz?','Mam chwilę.','Właśnie sobie przypomniałem/am o naszej rozmowie.'][Math.floor(Math.random()*4)]}`;
+      state.messages[p.botId].push({from:'bot',text:msg,time:now,unread:true});
+      addEpisode(p.botId,'Dotrzymał/a obietnicy i wrócił/a do rozmowy','warm',65);
+      state.activity.unshift({time:now,read:false,text:`@${b.handle} wrócił/a zgodnie z wcześniejszą obietnicą.`});
+    }
+  });
+}
+function maybePromoteCharacter(id){
+  ensureV11(); if(state.coreCast.includes(id))return;
+  let imp=state.sentient.importance[id]||0;
+  if(imp<78)return;
+  let weakest=state.coreCast.slice().sort((a,b)=>(state.sentient.importance[a]||0)-(state.sentient.importance[b]||0))[0];
+  if(weakest){state.coreCast=state.coreCast.filter(x=>x!==weakest);state.coreCast.push(id);state.activity.unshift({time:Date.now(),read:false,text:`@${bot(id)?.handle||'nowa osoba'} stał/a się ważną postacią w Twoim świecie.`})}
+}
+function importanceTouch(id,amount=2){
+  ensureV11(); state.sentient.importance[id]=Math.min(100,(state.sentient.importance[id]||25)+amount); maybePromoteCharacter(id)
+}
+function createStoryArc(){
+  ensureV11();
+  let active=state.sentient.arcs.filter(a=>a.status==='active');
+  if(active.length>=3)return;
+  let pair=shuffle(state.coreCast).slice(0,2); if(pair.length<2)return;
+  let types=['trip','romance','conflict','career','party'];
+  let type=types[Math.floor(Math.random()*types.length)];
+  let titles={
+    trip:'Spontaniczny wyjazd',
+    romance:'Rosnąca chemia',
+    conflict:'Napięcie między znajomymi',
+    career:'Nowa szansa zawodowa',
+    party:'Weekendowa impreza'
+  };
+  let arc={id:'arc'+Date.now()+Math.random(),type,title:titles[type],actors:pair,stage:1,status:'active',created:Date.now(),next:Date.now()+4*3600000,log:[]};
+  arc.log.push(`Historia rozpoczęta: ${arc.title}.`);
+  state.sentient.arcs.unshift(arc);
+  worldEvent(`${arc.title}: @${bot(pair[0]).handle} i @${bot(pair[1]).handle}.`,'arc',pair);
+}
+function advanceArcs(){
+  ensureV11(); let now=Date.now();
+  state.sentient.arcs.filter(a=>a.status==='active'&&a.next<=now).forEach(a=>{
+    a.stage++; let [a1,a2]=a.actors, b1=bot(a1),b2=bot(a2);
+    if(!b1||!b2){a.status='done';return}
+    if(a.type==='trip'){b1.city=b2.city; a.log.push(`Spotkali się w ${b1.city}.`); createCharacterMedia(b1,'trip'); createCharacterMedia(b2,'trip')}
+    if(a.type==='romance'){let e=graphEdge(a1,a2);if(e){e.type='flirt';e.strength=Math.min(100,e.strength+10)}a.log.push('Relacja zrobiła się wyraźnie bliższa.')}
+    if(a.type==='conflict'){let e=graphEdge(a1,a2);if(e){e.type='conflict';e.strength=Math.min(100,e.strength+12)}a.log.push('Napięcie przeniosło się do komentarzy i Stories.')}
+    if(a.type==='career'){a.log.push(`${b1.handle} dostał/a nową propozycję zawodową.`);remember(b1,'world','Dostał/a nową propozycję zawodową')}
+    if(a.type==='party'){state.stories.unshift({id:'arcst'+Date.now(),author:a1,img:imgSeed('party'+a1+Date.now(),900),created:now,views:400+Math.floor(Math.random()*2500)});a.log.push('Pojawiły się relacje z imprezy.')}
+    a.next=now+(4+Math.floor(Math.random()*8))*3600000;
+    if(a.stage>=4){a.status='done';a.log.push('Historia dobiegła końca.')}
+  });
+}
+function notificationPush(text,priority='normal',botId=null){
+  state.sentient.notificationQueue.unshift({text,priority,botId,time:Date.now(),read:false});
+  state.sentient.notificationQueue=state.sentient.notificationQueue.slice(0,100);
+}
+function notificationFlush(){
+  let q=state.sentient.notificationQueue.filter(n=>!n.read).sort((a,b)=>(b.priority==='high')-(a.priority==='high')).slice(0,3);
+  q.forEach(n=>{state.activity.unshift({time:n.time,read:false,text:n.text});n.read=true})
+}
+function directorLocalDecision(){
+  ensureV11();
+  let active=state.sentient.arcs.filter(a=>a.status==='active').length;
+  if(active<2&&Math.random()<.45)createStoryArc();
+  advanceArcs(); processPromises();
+  let candidates=state.coreCast.slice().sort((a,b)=>(state.sentient.importance[b]||0)-(state.sentient.importance[a]||0)).slice(0,5);
+  if(Math.random()<.35&&candidates[0]){
+    let b=bot(candidates[Math.floor(Math.random()*candidates.length)]);
+    maybeBotInitiates('random',1);
+    notificationPush(`@${b.handle} jest dziś szczególnie aktywny/a w Twoim świecie.`,'high',b.id);
+  }
+  state.sentient.lastDirectorSummary=`World Director zsynchronizował ${active} aktywne historie i ${state.sentient.promises.filter(p=>p.status==='open').length} otwartych obietnic.`;
+}
+async function runWorldDirector(force=false){
+  ensureV11(); let now=Date.now(),wd=state.sentient.worldDirector;
+  if(!force && now-wd.lastRun<180000)return;
+  wd.lastRun=now;
+  if(brainReady()){
+    try{
+      let payload={
+        player:state.player,
+        cast:state.coreCast.slice(0,12).map(id=>({persona:personaPack(bot(id)),importance:state.sentient.importance[id],facts:state.sentient.facts[id]?.slice(-6),episodes:state.sentient.episodes[id]?.slice(-5)})),
+        arcs:state.sentient.arcs.slice(0,6),
+        promises:state.sentient.promises.filter(p=>p.status==='open').slice(0,8),
+        recentEvents:state.world.events.slice(0,16)
+      };
+      let r=await callBrain('world_director',payload,30000);
+      if(r?.summary)state.sentient.lastDirectorSummary=r.summary;
+      if(r?.newArc && state.sentient.arcs.filter(a=>a.status==='active').length<3){
+        let ids=(r.newArc.actors||[]).filter(id=>bot(id)).slice(0,3);
+        if(ids.length>=2)state.sentient.arcs.unshift({id:'arc'+Date.now(),type:r.newArc.type||'social',title:r.newArc.title||'Nowa historia',actors:ids,stage:1,status:'active',created:now,next:now+4*3600000,log:[r.newArc.setup||'Historia rozpoczęta.']})
+      }
+      (r?.notifications||[]).slice(0,3).forEach(x=>notificationPush(x.text||x,'high'));
+    }catch(e){directorLocalDecision()}
+  }else directorLocalDecision();
+  notificationFlush(); save(); renderSentient(); renderActivity()
+}
+async function generateWorldRecap(){
+  ensureV11();
+  let local={
+    hours:Math.max(1,Math.floor((Date.now()-(state.lastOpened||Date.now()))/3600000)),
+    messages:Object.values(state.messages||{}).reduce((n,a)=>n+(a||[]).filter(m=>m.unread).length,0),
+    events:state.world.events.slice(0,8),
+    arcs:state.sentient.arcs.filter(a=>a.status==='active').slice(0,4),
+    promises:state.sentient.promises.filter(p=>p.status==='open').slice(0,4)
+  };
+  let text=`Od ostatniego wejścia: ${local.messages} nieprzeczytanych DM, ${local.events.length} nowych wydarzeń i ${local.arcs.length} aktywnych historii.`;
+  if(brainReady()){
+    try{
+      let r=await callBrain('world_recap',{player:state.player,...local},25000);
+      if(r?.recap)text=r.recap;
+    }catch(e){}
+  }
+  state.sentient.recap={text,time:Date.now()}; save(); renderSentient(); toast('World Recap gotowy')
+}
+function showCharacterDNA(id){
+  ensureV11();let b=bot(id);if(!b)return;let dna=b.dna||{};
+  let eps=(state.sentient.episodes[id]||[]).slice().reverse().slice(0,10);
+  modalBox.innerHTML=`<div class="row"><h3 style="margin:0">@${esc(b.handle)} · Character DNA</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div>
+  <div class="dna-grid" style="margin-top:12px">
+   <div class="dna-chip"><b>Ton</b><div class="muted tiny">${esc(dna.tone||'')}</div></div>
+   <div class="dna-chip"><b>Humor</b><div class="muted tiny">${esc(dna.humor||'')}</div></div>
+   <div class="dna-chip"><b>Publicznie</b><div class="muted tiny">${esc(dna.publicPersona||'')}</div></div>
+   <div class="dna-chip"><b>Prywatnie</b><div class="muted tiny">${esc(dna.privatePersona||'')}</div></div>
+   <div class="dna-chip"><b>Inicjatywa</b><div class="muted tiny">${dna.initiative||0}/100</div></div>
+   <div class="dna-chip"><b>Zazdrość</b><div class="muted tiny">${dna.jealousy||0}/100</div></div>
+  </div>
+  <h3>Relationship Timeline</h3><div class="timeline">${eps.map(e=>`<div class="timeline-item"><b>${esc(e.text)}</b><div class="muted tiny">${e.emotion} · ${new Date(e.time).toLocaleString('pl-PL')}</div></div>`).join('')||'<div class="muted">Jeszcze brak ważnych wspomnień.</div>'}</div>`;
+  modal.classList.add('show')
+}
+function sentientObserveDM(id,text,from){
+  ensureV11();importanceTouch(id,3);parsePromiseFromText(id,text,from);
+  if(from==='user'){addFact(id,`Użytkownik napisał: ${text.slice(0,120)}`,'dm'); if(text.length>20)addEpisode(id,`Ważniejsza rozmowa w DM: ${text.slice(0,90)}`,'engaged',45)}
+  else if(from==='bot'&&/przeprasz|tęsk|zazdro|spotka|lubię|wkur/.test(text.toLowerCase()))addEpisode(id,`Emocjonalny moment w DM: ${text.slice(0,100)}`,'emotional',70);
+}
+function renderSentient(){
+  if(!document.getElementById('sentientRecap'))return;ensureV11();
+  sentientRecap.innerHTML=`<b>World Director</b><div style="margin-top:5px">${esc(state.sentient.recap?.text||state.sentient.lastDirectorSummary||'Świat jest gotowy. World Director będzie pilnował ciągłości wydarzeń.')}</div><div class="muted tiny" style="margin-top:6px">${state.sentient.recap?.time?new Date(state.sentient.recap.time).toLocaleString('pl-PL'):''}</div>`;
+  storyArcsList.innerHTML=state.sentient.arcs.filter(a=>a.status==='active').map(a=>`<div class="arc"><b>${esc(a.title)}</b><div class="muted tiny">Etap ${a.stage} · ${a.actors.map(id=>'@'+bot(id).handle).join(', ')}</div><div class="tiny" style="margin-top:7px">${esc(a.log.at(-1)||'')}</div></div>`).join('')||'<div class="muted">Brak aktywnych historii.</div>';
+  promisesList.innerHTML=state.sentient.promises.filter(p=>p.status==='open').slice(0,10).map(p=>`<div class="promise"><b>@${bot(p.botId)?.handle||'?'}</b><div>${esc(p.text)}</div><div class="muted tiny">termin: ${new Date(p.due).toLocaleString('pl-PL')}</div></div>`).join('')||'<div class="muted">Brak otwartych obietnic.</div>';
+  importanceList.innerHTML=Object.entries(state.sentient.importance).sort((a,b)=>b[1]-a[1]).slice(0,12).map(([id,v])=>{let b=bot(id);if(!b)return'';return `<div class="graphrow" onclick="showCharacterDNA('${id}')"><img class="avatar" src="${b.avatar}"><div><b>@${esc(b.handle)}</b><div class="muted tiny">${esc(b.dna?.tone||'')} · ${esc(b.dna?.privatePersona||'')}</div></div><span>${Math.round(v)}</span></div>`}).join('');
+}
+function sentientTick(){
+  if(!state?.initialized)return;ensureV11();processPromises();advanceArcs();runWorldDirector(false);save();renderSentient()
+}
+
+function ensureV12(){
+ ensureV11();state.life=state.life||{};state.life.profiles=state.life.profiles||{};state.life.groups=state.life.groups||[];state.life.meetings=state.life.meetings||[];state.life.knowledge=state.life.knowledge||{};state.life.dayLog=state.life.dayLog||[];state.life.algorithm=state.life.algorithm||{explore:{},feed:{}};state.life.drafts=state.life.drafts||[];state.life.highlights=state.life.highlights||[];
+ state.coreCast.forEach((id,i)=>{let b=bot(id);if(!b)return;if(!state.life.profiles[id])state.life.profiles[id]={needs:{social:35+(i*13)%60,rest:30+(i*17)%65,fun:25+(i*19)%70,career:40+(i*11)%55,romance:20+(i*23)%70},emotion:{mood:['happy','calm','excited','stressed','lonely'][i%5],valence:20+(i*9)%70,energy:35+(i*13)%60},opinions:{player:{trust:rel(id).trust||40,funny:30+(i*7)%60,attractive:35+(i*11)%60,reliable:30+(i*5)%65}},attraction:{physical:30+(i*17)%65,emotional:rel(id).closeness||30,romantic:rel(id).chemistry||20},routine:{wake:6+(i%4),workStart:8+(i%3),workEnd:15+(i%4),sleep:22+(i%3)},activity:'home',historyBeforePlayer:['stara znajomość','poprzednia praca','ważny wyjazd'][i%3]}});
+ if(!state.life.groups.length){let c=state.coreCast.slice();for(let i=0;i<3;i++)state.life.groups.push({id:'fg'+i,name:['Ekipa z miasta','Travel crew','Weekendowa paczka'][i],members:shuffle(c).slice(i?4:5, i?9:10)})}
+}
+function lifeProfile(id){ensureV12();return state.life.profiles[id]}
+function clamp100(x){return Math.max(0,Math.min(100,Math.round(x)))}
+function chooseLifeActivity(b,l){
+ let h=new Date().getHours(),n=l.needs;
+ if(h>=l.routine.sleep||h<l.routine.wake)return 'sleep';
+ if(h>=l.routine.workStart&&h<l.routine.workEnd)return 'work';
+ if(n.rest>72)return 'rest';
+ if(n.social>70)return 'friends';
+ if(n.fun>72)return 'outing';
+ if(n.career>75)return 'create';
+ if(n.romance>72)return 'dating';
+ return ['home','coffee','gym','walk'][Math.floor(Math.random()*4)]
+}
+function evolveNeeds(id){
+ let b=bot(id),l=lifeProfile(id);if(!b||!l)return;
+ Object.keys(l.needs).forEach(k=>l.needs[k]=clamp100(l.needs[k]+Math.random()*10-3));
+ l.activity=chooseLifeActivity(b,l);
+ if(l.activity==='sleep'||l.activity==='rest'){l.needs.rest=clamp100(l.needs.rest-25);l.emotion.energy=clamp100(l.emotion.energy+20)}
+ if(l.activity==='friends'){l.needs.social=clamp100(l.needs.social-30);l.needs.fun=clamp100(l.needs.fun-12);l.emotion.valence=clamp100(l.emotion.valence+10)}
+ if(l.activity==='outing'){l.needs.fun=clamp100(l.needs.fun-30);l.emotion.energy=clamp100(l.emotion.energy-8)}
+ if(l.activity==='create'){l.needs.career=clamp100(l.needs.career-25);if(Math.random()<.4)createCharacterMedia(b,'creator life')}
+ if(l.activity==='dating'){l.needs.romance=clamp100(l.needs.romance-22)}
+ l.emotion.mood=l.emotion.valence<30?'stressed':l.needs.social>78?'lonely':l.emotion.energy>70?'excited':'calm';
+ b.presence=l.activity==='sleep'?'sleeping':(['work','rest'].includes(l.activity)?'busy':Math.random()<.65?'online':'away');b.online=b.presence==='online'
+}
+function opinionDelta(id,key,delta){let l=lifeProfile(id);if(!l)return;l.opinions.player[key]=clamp100((l.opinions.player[key]||40)+delta)}
+function attractionDelta(id,key,delta){let l=lifeProfile(id);if(!l)return;l.attraction[key]=clamp100((l.attraction[key]||30)+delta)}
+function knowledgeAdd(fact,knowers=[],secret=false,source='world'){
+ ensureV12();let id='k'+Date.now()+Math.random();state.life.knowledge[id]={id,fact,knowers:[...new Set(knowers)],secret,source,time:Date.now(),versions:{}};return id
+}
+function knowledgeShare(kid,from,to){
+ let k=state.life.knowledge[kid];if(!k||!k.knowers.includes(from)||k.knowers.includes(to))return false;
+ let edge=graphEdge(from,to);if(!edge||edge.strength<38)return false;if(k.secret&&Math.random()>.16)return false;
+ k.knowers.push(to);if(Math.random()<.12)k.versions[to]=k.fact.replace(/bardzo|naprawdę/g,'trochę');return true
+}
+function diffuseKnowledge(){
+ Object.values(state.life.knowledge).slice(-20).forEach(k=>{let from=k.knowers[Math.floor(Math.random()*k.knowers.length)];if(!from)return;let edges=Object.entries(state.socialGraph[from]||{}).sort((a,b)=>b[1].strength-a[1].strength);if(edges[0])knowledgeShare(k.id,from,edges[0][0])})
+}
+function scheduleMeeting(){
+ ensureV12();let choices=state.coreCast.slice(0,12).map((id,i)=>`${i+1}. @${bot(id).handle}`).join('\n');let n=parseInt(prompt('Z kim chcesz się umówić?\n'+choices));if(!n||!state.coreCast[n-1])return;let id=state.coreCast[n-1],b=bot(id),when=prompt('Kiedy? np. jutro 19:00','jutro 19:00');if(!when)return;
+ let due=Date.now()+24*3600000;state.life.meetings.unshift({id:'meet'+Date.now(),botId:id,label:when,due,status:'planned',created:Date.now()});promiseAdd(id,`Spotkanie: ${when}`,due,'meeting');addEpisode(id,`Umówiliście spotkanie: ${when}`,'anticipation',70);toast(`Spotkanie z @${b.handle} zapisane`);save();renderLife()
+}
+function processMeetings(){
+ let now=Date.now();state.life.meetings.filter(m=>m.status==='planned'&&m.due<=now).forEach(m=>{let b=bot(m.botId);m.status=Math.random()<.85?'happened':'cancelled';if(m.status==='happened'){let l=lifeProfile(m.botId);l.attraction.emotional=clamp100(l.attraction.emotional+8);l.opinions.player.trust=clamp100(l.opinions.player.trust+6);addEpisode(m.botId,'Spotkanie z użytkownikiem','warm',85);knowledgeAdd(`@${b.handle} spotkał/a się z użytkownikiem`,[m.botId],false,'meeting');worldEvent(`Spotkanie z @${b.handle} miało konsekwencje dla relacji.`,'meeting',[m.botId])}else{addEpisode(m.botId,'Planowane spotkanie nie doszło do skutku','disappointed',60);state.messages[m.botId]=state.messages[m.botId]||[];state.messages[m.botId].push({from:'bot',text:'Przepraszam, dziś jednak nie dam rady. Odezwę się później.',time:now,unread:true})}})
+}
+function maybeFriendGroupEvent(){
+ if(Math.random()>.18)return;let g=state.life.groups[Math.floor(Math.random()*state.life.groups.length)];if(!g)return;let members=shuffle(g.members).slice(0,2+Math.floor(Math.random()*3));worldEvent(`${g.name}: ${members.map(id=>'@'+bot(id).handle).join(', ')} spędzają razem czas.`,'group',members);members.forEach(id=>{let l=lifeProfile(id);if(l){l.needs.social=clamp100(l.needs.social-18);l.emotion.valence=clamp100(l.emotion.valence+7)}});if(members.length>1)knowledgeAdd(`Spotkanie paczki ${g.name}`,members,false,'group')
+}
+function lifeContentDecision(id){
+ let b=bot(id),l=lifeProfile(id);if(!b||!l)return;
+ let chance=l.activity==='outing'||l.activity==='friends'?0.22:l.activity==='create'?0.35:0.04;if(Math.random()>chance)return;
+ let m=createCharacterMedia(b,l.activity);if(Math.random()<.55)state.stories.unshift({id:'life'+Date.now()+Math.random(),author:id,img:m.img,created:Date.now(),views:150+Math.floor(Math.random()*2200)});else state.posts.unshift({id:'lifep'+Date.now()+Math.random(),author:id,img:m.img,cap:m.caption,location:b.city,likes:20+Math.floor(Math.random()*1200),comments:[],created:Date.now()})
+}
+function emotionalDecay(){
+ state.coreCast.forEach(id=>{let l=lifeProfile(id);if(!l)return;l.attraction.emotional=clamp100(l.attraction.emotional+(Math.random()*2-1));if((state.sentient.importance[id]||0)<45)l.opinions.player.trust=clamp100(l.opinions.player.trust-.4)})
+}
+function lifeTick(force=false){
+ if(!state?.initialized)return;ensureV12();let now=Date.now();if(!force&&now-(state.life.lastTick||0)<90000)return;state.life.lastTick=now;
+ state.coreCast.forEach(id=>{evolveNeeds(id);lifeContentDecision(id)});processMeetings();maybeFriendGroupEvent();diffuseKnowledge();emotionalDecay();
+ state.life.dayLog.unshift({time:now,text:`Symulacja życia: ${state.coreCast.filter(id=>lifeProfile(id)?.activity==='work').length} w pracy, ${state.coreCast.filter(id=>lifeProfile(id)?.activity==='sleep').length} śpi, ${state.coreCast.filter(id=>['friends','outing','dating'].includes(lifeProfile(id)?.activity)).length} aktywnych społecznie.`});state.life.dayLog=state.life.dayLog.slice(0,50);save();renderLife();renderStories();renderFeed()
+}
+function renderLife(){
+ if(!document.getElementById('lifeSummary'))return;ensureV12();
+ let active=state.coreCast.filter(id=>!['sleep','work'].includes(lifeProfile(id)?.activity)).length;
+ lifeSummary.innerHTML=`<div class="stats" style="margin-top:12px"><div><b>${active}</b><div class="muted">aktywnych</div></div><div><b>${state.life.groups.length}</b><div class="muted">paczek</div></div><div><b>${Object.keys(state.life.knowledge).length}</b><div class="muted">faktów świata</div></div></div>`;
+ friendGroups.innerHTML=state.life.groups.map(g=>`<div class="life-card"><b>${esc(g.name)}</b><div style="margin-top:7px">${g.members.map(id=>`<span class="groupchip">@${esc(bot(id)?.handle||'?')}</span>`).join('')}</div></div>`).join('');
+ meetingsList.innerHTML=state.life.meetings.slice(0,8).map(m=>`<div class="meeting"><b>@${esc(bot(m.botId)?.handle||'?')}</b> · ${esc(m.label)}<div class="muted tiny">${m.status}</div></div>`).join('')||'<div class="muted">Nie masz jeszcze zaplanowanych spotkań.</div>';
+ lifeProfiles.innerHTML=state.coreCast.slice(0,12).map(id=>{let b=bot(id),l=lifeProfile(id);return `<div class="life-card" onclick="showLifeProfile('${id}')"><div class="row"><img class="avatar" src="${b.avatar}"><div class="grow"><b>@${esc(b.handle)}</b><div class="muted tiny">${esc(l.activity)} · ${esc(l.emotion.mood)} · ${b.presence||'away'}</div></div><span class="badge">${l.attraction.romantic}/100 ♥</span></div><div class="life-grid" style="margin-top:9px"><div class="tiny">social ${l.needs.social}<div class="needbar"><i style="width:${l.needs.social}%"></i></div></div><div class="tiny">fun ${l.needs.fun}<div class="needbar"><i style="width:${l.needs.fun}%"></i></div></div></div></div>`}).join('');
+ knowledgeList.innerHTML=Object.values(state.life.knowledge).slice(-10).reverse().map(k=>`<div class="knowledge"><b>${k.secret?'🔐 Sekret':'Fakt'}</b><div>${esc(k.fact)}</div><div class="muted tiny">Wie o tym: ${k.knowers.map(id=>'@'+(bot(id)?.handle||id)).join(', ')}</div></div>`).join('')||'<div class="muted">Wiedza świata zacznie powstawać z wydarzeń.</div>'
+}
+function showLifeProfile(id){
+ let b=bot(id),l=lifeProfile(id);if(!b||!l)return;modalBox.innerHTML=`<div class="row"><h3 style="margin:0">@${esc(b.handle)} · Life</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="life-card"><b>Teraz</b><div>${esc(l.activity)} · ${esc(l.emotion.mood)}</div></div><div class="life-grid"><div class="dna-chip"><b>Attraction</b><div class="muted tiny">physical ${l.attraction.physical}<br>emotional ${l.attraction.emotional}<br>romantic ${l.attraction.romantic}</div></div><div class="dna-chip"><b>Opinia o Tobie</b><div class="muted tiny">trust ${l.opinions.player.trust}<br>funny ${l.opinions.player.funny}<br>attractive ${l.opinions.player.attractive}<br>reliable ${l.opinions.player.reliable}</div></div></div><div class="life-card"><b>Życie sprzed Ciebie</b><div class="muted">${esc(l.historyBeforePlayer)}</div></div>`;modal.classList.add('show')
+}
+
+function ensureV13(){
+ ensureV12();
+ state.online=state.online||{backendUrl:'',worldId:'',connected:false,lastSync:0,cloudState:false,autoSync:true};
+ if(!state.online.worldId){
+   state.online.worldId='world_'+crypto.getRandomValues(new Uint32Array(4)).join('_');
+ }
+}
+function onlineBase(){
+ ensureV13();
+ let u=(state.online.backendUrl||state.brain?.url||'').trim().replace(/\/$/,'');
+ if(u.endsWith('/api/brain'))u=u.slice(0,-10);
+ return u;
+}
+async function onlineFetch(path,opts={}){
+ let base=onlineBase(); if(!base)throw new Error('Brak backend URL');
+ let r=await fetch(base+path,{...opts,headers:{'Content-Type':'application/json',...(opts.headers||{})}});
+ if(!r.ok)throw new Error('HTTP '+r.status);
+ return await r.json();
+}
+async function connectOnlineWorld(){
+ ensureV13();
+ let el=document.getElementById('onlineBackend'),url=(el?.value||'').trim().replace(/\/$/,'');
+ if(!url){toast('Wpisz URL backendu');return}
+ state.online.backendUrl=url;state.brain=state.brain||{};state.brain.url=url;state.brain.enabled=true;
+ try{
+   let ping=await onlineFetch('/api/brain',{method:'POST',body:JSON.stringify({task:'ping',payload:{}})});
+   if(!ping?.ok)throw new Error('Brain ping failed');
+   state.online.connected=true;state.online.cloudState=true;
+   await syncCloud(true);
+   toast('Online World połączony');
+ }catch(e){state.online.connected=false;toast('Nie udało się połączyć: '+e.message)}
+ save();renderOnline()
+}
+async function testAI(){
+ ensureV13();
+ try{
+   let r=await onlineFetch('/api/brain',{method:'POST',body:JSON.stringify({task:'ping',payload:{}})});
+   toast(r?.ok?'AI Brain działa':'Brain nie odpowiedział');
+ }catch(e){toast('Błąd AI: '+e.message)}
+}
+function cloudStatePayload(){
+ let copy=JSON.parse(JSON.stringify(state));
+ // backend config stays local
+ if(copy.online)copy.online.backendUrl='';
+ if(copy.brain)copy.brain.url='';
+ return copy
+}
+async function syncCloud(manual=false){
+ ensureV13();if(!state.online.connected&&!manual)return;
+ try{
+   let base=onlineBase();if(!base)return;
+   let remote=await onlineFetch('/api/state?worldId='+encodeURIComponent(state.online.worldId));
+   if(remote?.state && remote.updatedAt && remote.updatedAt>state.online.lastSync){
+     let cfg={...state.online,backendUrl:state.online.backendUrl};
+     let brainCfg={...state.brain,url:state.brain?.url||state.online.backendUrl};
+     state=remote.state;
+     ensureV13();
+     state.online={...state.online,...cfg,connected:true,lastSync:remote.updatedAt};
+     state.brain={...state.brain,...brainCfg};
+   }
+   let saved=await onlineFetch('/api/state',{method:'POST',body:JSON.stringify({worldId:state.online.worldId,state:cloudStatePayload()})});
+   state.online.connected=true;state.online.cloudState=true;state.online.lastSync=saved.updatedAt||Date.now();
+   save();renderOnline()
+ }catch(e){state.online.connected=false;if(manual)toast('Sync: '+e.message);renderOnline()}
+}
+function toggleAutoSync(){ensureV13();state.online.autoSync=!state.online.autoSync;save();renderOnline();toast(state.online.autoSync?'Auto-sync włączony':'Auto-sync wyłączony')}
+function renderOnline(){
+ if(!document.getElementById('onlineStatus'))return;ensureV13();
+ let el=document.getElementById('onlineBackend');if(el&&!el.value)el.value=state.online.backendUrl||state.brain?.url||'';
+ onlineBadge.textContent=state.online.connected?'online':'offline';
+ onlineStatus.innerHTML=`<b>${state.online.connected?'✓ Backend połączony':'Tryb lokalny'}</b><div class="muted tiny" style="margin-top:5px">World ID: ${esc(state.online.worldId)}</div><div class="muted tiny">Cloud state: ${state.online.cloudState?'aktywny':'nieaktywny'} · Auto-sync: ${state.online.autoSync?'ON':'OFF'}</div><div class="muted tiny">Ostatnia synchronizacja: ${state.online.lastSync?new Date(state.online.lastSync).toLocaleString('pl-PL'):'—'}</div>`;
+}
+function backgroundCloudSync(){if(state?.initialized&&state.online?.autoSync&&state.online?.backendUrl)syncCloud(false)}
 async function finishOnboarding(){let n=obName.value.trim(),h=obHandle.value.trim().replace(/^@/,'').replace(/\s+/g,'');if(!n||!h)return toast('Wpisz nazwę i login');state.player={...state.player,name:n,handle:h,city:obCity.value.trim(),bio:obBio.value.trim(),avatar:obAvatar.files[0]?await fileData(obAvatar.files[0],500):''};state.initialized=true;await save();onboard.classList.remove('show');renderAll()}
 function renderStories(){stories.innerHTML=`<div class="story" onclick="openMyStory()"><div class="storyring"><img src="${state.player.avatar||imgSeed('me',180)}"></div><span>Twoja relacja</span></div>`+shuffle(state.bots).slice(0,24).map(b=>`<div class="story" onclick="openStory('${b.id}')"><div class="storyring"><img src="${b.avatar}"></div><span>${esc(b.handle)}</span></div>`).join('')}
 function renderSuggestions(){let s=shuffle(state.bots.filter(b=>!state.followingIds.includes(b.id))).slice(0,8);suggestions.innerHTML=`<div class="row" style="margin:1px 2px 8px"><b>Proponowane dla Ciebie</b><span class="spacer"></span><span class="muted tiny">Odkrywaj</span></div><div class="suggest">${s.map(b=>`<div class="suggestcard"><img src="${b.avatar}"><b style="display:block;margin-top:6px">@${esc(b.handle)}</b><div class="muted tiny">${esc(b.city)}</div><button class="primary" style="margin-top:8px;padding:7px 10px" onclick="toggleFollow('${b.id}')">Obserwuj</button></div>`).join('')}</div>`}
@@ -323,35 +1094,35 @@ function renderMessages(){let q=(peopleSearch.value||'').toLowerCase(),ids=Objec
 function renderActivity(){activityList.innerHTML=state.activity.slice(0,100).map(a=>`<div class="panel" style="${a.read?'':'border-color:#5d4ca0'}">${esc(a.text)}<div class="muted tiny" style="margin-top:5px">${fmtTime(a.time)}</div></div>`).join('')||'<p class="muted">Jeszcze nic tutaj nie ma.</p>'}
 function renderProfile(){let mine=state.posts.filter(p=>p.author==='player').sort((a,b)=>b.created-a.created);profileHead.innerHTML=`<div class="profiletop"><img class="avatar lg" src="${state.player.avatar||imgSeed('me',180)}"><div class="profilemeta"><h2>@${esc(state.player.handle)}</h2><b>${esc(state.player.name)}</b><div class="muted">${esc(state.player.city||'')}</div></div></div><div class="stats"><div><b>${mine.length}</b><div class="muted">posty</div></div><div onclick="showFollowers('followers')"><b>${state.player.followers}</b><div class="muted">followers</div></div><div onclick="showFollowers('following')"><b>${state.player.following}</b><div class="muted">obserwujesz</div></div></div><div class="bio">${esc(state.player.bio)}</div><div class="profilebuttons" style="margin-top:13px"><button class="secondary" onclick="editProfile()">Edytuj profil</button><button class="secondary" onclick="openSettings()">Ustawienia</button></div>`;insights.innerHTML=`<div class="row"><h3 style="margin:0">Insights</h3><span class="spacer"></span><span class="muted tiny">ostatnia aktywność</span></div><div class="metricgrid" style="margin-top:10px"><div class="metric"><b>${state.player.reach}</b>Zasięg</div><div class="metric"><b>${state.player.views}</b>Odwiedziny profilu</div><div class="metric"><b>${Object.keys(state.messages).length}</b>Rozmowy</div><div class="metric"><b>${state.saved.length}</b>Zapisane</div></div>`;myGrid.innerHTML=mine.map(p=>`<img src="${p.img}" onclick="openMy('${p.id}')">`).join('')}
 
-async function publishPost(){let f=postImage.files[0];if(!f)return toast('Wybierz zdjęcie');let loc=postLocation.value.trim(),tags=postTags.value.trim(),cap=(postCaption.value.trim()+(tags?' '+tags:'')).trim(),p={id:'u'+Date.now(),author:'player',img:await fileData(f),cap,location:loc,likes:45+Math.floor(Math.random()*330),comments:[],created:Date.now()};let count=22+Math.floor(Math.random()*28);let usedComments=[];shuffle(state.bots).slice(0,count).forEach((b,i)=>{let txt=contextComment(cap+' '+loc,b,usedComments);usedComments.push(txt);p.comments.push({id:'c'+Date.now()+'_'+i+'_'+Math.random().toString(36).slice(2),botId:b.id,user:b.handle,text:txt,replies:[]})});let gain=25+Math.floor(Math.random()*105)+Math.floor(count*1.2);state.player.followers+=gain;state.player.reach+=700+Math.floor(Math.random()*5200);state.player.views+=70+Math.floor(Math.random()*800);state.posts.push(p);state.activity.unshift({time:Date.now(),read:false,text:`Nowy post: ${p.likes} polubień, ${count} komentarzy i +${gain} followersów.`});if(shareStoryToggle.classList.contains('on'))state.stories.push({id:'auto'+Date.now(),img:p.img,cap:p.cap,created:Date.now(),views:100+Math.floor(Math.random()*800),replies:[]});await save();setTimeout(()=>maybeBotInitiates('post',1+Math.floor(Math.random()*2)),1400);postImage.value='';postCaption.value='';postLocation.value='';postTags.value='';postPreview.innerHTML=`<div><h3>Wybierz zdjęcie</h3><span class="muted">Dotknij, aby wybrać z telefonu</span></div>`;shareStoryToggle.classList.remove('on');refreshFeed(false);renderProfile();switchPage('profile');toast('Post opublikowany')}
+async function publishPost(){let f=postImage.files[0];if(!f)return toast('Wybierz zdjęcie');let loc=postLocation.value.trim(),tags=postTags.value.trim(),cap=(postCaption.value.trim()+(tags?' '+tags:'')).trim(),p={id:'u'+Date.now(),author:'player',img:await fileData(f),cap,location:loc,likes:45+Math.floor(Math.random()*330),comments:[],created:Date.now()};let count=22+Math.floor(Math.random()*28);let usedComments=[];shuffle(state.bots).slice(0,count).forEach((b,i)=>{let txt=contextComment(cap+' '+loc,b,usedComments);usedComments.push(txt);p.comments.push({id:'c'+Date.now()+'_'+i+'_'+Math.random().toString(36).slice(2),botId:b.id,user:b.handle,text:txt,replies:[]})});let gain=25+Math.floor(Math.random()*105)+Math.floor(count*1.2);state.player.followers+=gain;state.player.reach+=700+Math.floor(Math.random()*5200);state.player.views+=70+Math.floor(Math.random()*800);state.posts.push(p);state.activity.unshift({time:Date.now(),read:false,text:`Nowy post: ${p.likes} polubień, ${count} komentarzy i +${gain} followersów.`});if(shareStoryToggle.classList.contains('on'))state.stories.push({id:'auto'+Date.now(),img:p.img,cap:p.cap,created:Date.now(),views:100+Math.floor(Math.random()*800),replies:[]});updateInterestFromPost(p);await save();setTimeout(()=>maybeBotInitiates('post',1+Math.floor(Math.random()*2)),1400);if(brainReady())setTimeout(()=>enrichPostWithBrain(p),700);postImage.value='';postCaption.value='';postLocation.value='';postTags.value='';postPreview.innerHTML=`<div><h3>Wybierz zdjęcie</h3><span class="muted">Dotknij, aby wybrać z telefonu</span></div>`;shareStoryToggle.classList.remove('on');refreshFeed(false);renderProfile();switchPage('profile');toast('Post opublikowany')}
 async function publishStory(){let f=storyImage.files[0];if(!f)return toast('Wybierz zdjęcie');let s={id:'s'+Date.now(),img:await fileData(f),cap:storyCaption.value.trim(),created:Date.now(),views:80+Math.floor(Math.random()*900),replies:[]},n=6+Math.floor(Math.random()*12);shuffle(state.bots).slice(0,n).forEach(b=>{let txt=contextComment(s.cap||'relacja',b);s.replies.push({botId:b.id,text:txt});state.messages[b.id]=state.messages[b.id]||[];state.messages[b.id].push({from:'bot',text:'Odpowiedź na Twoją relację: '+txt,time:Date.now()})});state.stories.push(s);state.activity.unshift({time:Date.now(),read:false,text:`Relacja: ${s.views} wyświetleń i ${n} odpowiedzi w DM.`});await save();setTimeout(()=>maybeBotInitiates('story',1),1200);renderMessages();renderActivity();toast('Relacja dodana')}
 function focusComment(id){setTimeout(()=>document.getElementById('ci_'+id)?.focus(),30)}
 function like(id){state.likes[id]=!state.likes[id];save();renderFeed()}
 function toggleSave(id){let i=state.saved.indexOf(id);if(i>=0)state.saved.splice(i,1);else state.saved.push(id);save();renderFeed();toast(i>=0?'Usunięto z zapisanych':'Zapisano post')}
 function addComment(id){let i=document.getElementById('ci_'+id),t=i.value.trim();if(!t)return;let p=state.posts.find(x=>x.id===id);p.comments.push({id:'self'+Date.now(),user:state.player.handle,text:t,replies:[]});i.value='';save();renderFeed()}
 function replyTo(pid,cid){let p=state.posts.find(x=>x.id===pid),c=p.comments.find(x=>x.id===cid);if(!c)return;modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Odpowiedź</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="panel" style="margin-top:10px"><b>@${esc(c.user)}</b><div>${esc(c.text)}</div></div><textarea id="replyInput" rows="3" placeholder="Napisz odpowiedź..."></textarea><button class="primary" style="width:100%;margin-top:10px" onclick="saveReply('${pid}','${cid}')">Wyślij</button>`;modal.classList.add('show')}
-async function saveReply(pid,cid){let t=replyInput.value.trim();if(!t)return;let p=state.posts.find(x=>x.id===pid),c=p.comments.find(x=>x.id===cid),b=bot(c.botId);c.replies.push({user:state.player.handle,text:t});await save();closeModal();renderFeed();setTimeout(async()=>{if(b&&Math.random()<.75){c.replies.push({user:b.handle,text:dmReply(b,t)});await save();renderFeed();renderProfile()}},650)}
+async function saveReply(pid,cid){let t=replyInput.value.trim();if(!t)return;let p=state.posts.find(x=>x.id===pid),c=p.comments.find(x=>x.id===cid),b=bot(c.botId);c.replies.push({user:state.player.handle,text:t});await save();closeModal();renderFeed();setTimeout(async()=>{if(b&&Math.random()<.75){c.replies.push({user:b.handle,text:await cloudCommentReply(p,c,b,t)});await save();renderFeed();renderProfile()}},650)}
 function openMy(id){let p=state.posts.find(x=>x.id===id);modalBox.innerHTML=`<div class="row"><b>Twój post</b><span class="spacer"></span><button class="iconbtn" onclick="editPost('${id}')">✎</button><button class="iconbtn" onclick="deletePost('${id}')">🗑</button><button class="iconbtn" onclick="closeModal()">✕</button></div><div style="margin-top:10px">${postCard(p)}</div>`;modal.classList.add('show')}
 function editPost(id){let p=state.posts.find(x=>x.id===id);modalBox.innerHTML=`<h3>Edytuj post</h3><textarea id="editCap" rows="4">${esc(p.cap)}</textarea><input id="editLoc" type="text" value="${esc(p.location||'')}" placeholder="Lokalizacja" style="margin-top:8px"><button class="primary" style="width:100%;margin-top:10px" onclick="savePostEdit('${id}')">Zapisz zmiany</button>`}
 async function savePostEdit(id){let p=state.posts.find(x=>x.id===id);p.cap=editCap.value.trim();p.location=editLoc.value.trim();await save();closeModal();renderProfile();refreshFeed(false);toast('Post zaktualizowany')}
 async function deletePost(id){if(!confirm('Usunąć ten post?'))return;state.posts=state.posts.filter(p=>p.id!==id);state.saved=state.saved.filter(x=>x!==id);await save();closeModal();renderProfile();refreshFeed(false);toast('Post usunięty')}
-function openBot(id){let b=bot(id),f=state.followingIds.includes(id);modalBox.innerHTML=`<div class="profiletop"><img class="avatar lg" src="${b.avatar}"><div class="profilemeta"><h2>${esc(b.name)}</h2><div>@${esc(b.handle)}</div><div class="muted">${esc(b.city)}</div></div></div><div class="panel" style="margin-top:12px">${esc(b.bio)}<br><b>${b.followers} followers</b><div class="muted tiny" style="margin-top:7px">Relacja: ${relationLabel(b)} · chemia ${b.chemistry||0}%</div></div><div class="profilebuttons"><button class="primary" onclick="openChat('${id}')">Wiadomość</button><button class="secondary" onclick="toggleFollow('${id}')">${f?'Obserwujesz':'Obserwuj'}</button></div><div class="profilebuttons" style="margin-top:8px"><button class="secondary" onclick="toggleMute('${id}')">${state.mutedIds.includes(id)?'Włącz':'Wycisz'}</button><button class="secondary" onclick="toggleBlock('${id}')">${state.blockedIds.includes(id)?'Odblokuj':'Zablokuj'}</button></div>`;modal.classList.add('show')}
-async function toggleFollow(id){let i=state.followingIds.indexOf(id);if(i>=0){state.followingIds.splice(i,1);state.player.following--}else{state.followingIds.push(id);state.player.following++;state.activity.unshift({time:Date.now(),read:false,text:`Zacząłeś/aś obserwować @${bot(id).handle}.`})}await save();renderSuggestions();renderProfile();openBot(id)}
-function openChat(id){activeChat=id;let b=bot(id);state.messages[id]=state.messages[id]||[];state.messages[id].forEach(m=>m.unread=false);let ms=state.messages[id];save();modalBox.innerHTML=`<div class="row"><img class="avatar" src="${b.avatar}"><div><b>${esc(b.name)}</b><div class="muted tiny">@${esc(b.handle)} · ${esc(b.city)}</div></div><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div id="chatlog" class="chatlog">${ms.map(m=>`<div class="bubble ${m.from==='me'?'me':'bot'}">${esc(m.text)}</div>`).join('')||'<div class="muted">Napisz pierwszą wiadomość.</div>'}</div><div class="composer"><input id="chatInput" placeholder="Wiadomość..." onkeydown="if(event.key==='Enter')sendChat()"><button class="iconbtn" onclick="sendChat()"><svg class="icon"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button></div>`;modal.classList.add('show');setTimeout(()=>{let c=document.getElementById('chatlog');if(c)c.scrollTop=c.scrollHeight},30)}
-async function sendChat(){let t=chatInput.value.trim();if(!t)return;let id=activeChat,b=bot(id);state.messages[id].push({from:'me',text:t,time:Date.now()});b.affinity=Math.min(100,b.affinity+1);if(/[😏😘❤️🔥]|podob|spotk|pocał|hot/i.test(t))b.chemistry=Math.min(100,(b.chemistry||0)+2);await save();openChat(id);let cl=document.getElementById('chatlog');if(cl){cl.insertAdjacentHTML('beforeend','<div class="typing"><i></i><i></i><i></i></div>');cl.scrollTop=cl.scrollHeight}setTimeout(async()=>{state.messages[id].push({from:'bot',text:dmReply(b,t),time:Date.now(),unread:activeChat!==id});await save();if(activeChat===id)openChat(id);renderMessages()},700+Math.floor(Math.random()*800))}
+function openBot(id){let b=bot(id),f=state.followingIds.includes(id);modalBox.innerHTML=`<div class="profiletop"><img class="avatar lg" src="${b.avatar}"><div class="profilemeta"><h2>${esc(b.name)}</h2><div>@${esc(b.handle)}</div><div class="muted">${esc(b.city)}</div></div></div><div class="panel" style="margin-top:12px">${esc(b.bio)}<br><b>${b.followers} followers</b><div class="muted tiny" style="margin-top:7px">Relacja: ${relationLabel(b)} · chemia ${b.chemistry||0}%</div></div><div class="profilebuttons"><button class="primary" onclick="openChat('${id}')">Wiadomość</button><button class="secondary" onclick="toggleFollow('${id}')">${f?'Obserwujesz':'Obserwuj'}</button></div><div class="profilebuttons" style="margin-top:8px"><button class="secondary" onclick="toggleMute('${id}')">${state.mutedIds.includes(id)?'Włącz':'Wycisz'}</button><button class="secondary" onclick="toggleBlock('${id}')">${state.blockedIds.includes(id)?'Odblokuj':'Zablokuj'}</button></div><div class="profilebuttons" style="margin-top:8px"><button class="secondary grow" onclick="showRelationship('${id}')">Relacja</button><button class="secondary grow ${state.closeFriends.includes(id)?'cf':''}" onclick="toggleCloseFriend('${id}')">${state.closeFriends.includes(id)?'✓ Close Friends':'+ Close Friends'}</button></div><div class="profilebuttons" style="margin-top:8px"><button class="secondary grow" onclick="mentionBotInPost('${id}')">@ Oznacz</button><button class="secondary grow" onclick="createCollab('${id}')">Collab</button></div><div class="profilebuttons" style="margin-top:8px"><button class="secondary grow" onclick="showCharacterDNA('${id}')">DNA / Historia</button></div>`;modal.classList.add('show')}
+async function toggleFollow(id){let bb=bot(id);if(bb?.private&&!state.followingIds.includes(id)){if(!state.followRequests.some(r=>r.botId===id&&r.status==='pending')){state.followRequests.unshift({botId:id,status:'pending',time:Date.now()});save();toast('Wysłano prośbę o obserwowanie');}return}let i=state.followingIds.indexOf(id);if(i>=0){state.followingIds.splice(i,1);state.player.following--}else{state.followingIds.push(id);state.player.following++;state.activity.unshift({time:Date.now(),read:false,text:`Zacząłeś/aś obserwować @${bot(id).handle}.`})}await save();renderSuggestions();renderProfile();openBot(id)}
+function openChat(id){activeChat=id;let b=bot(id);state.messages[id]=state.messages[id]||[];state.messages[id].forEach(m=>m.unread=false);let ms=state.messages[id];save();modalBox.innerHTML=`<div class="row"><img class="avatar" src="${b.avatar}"><div><b>${esc(b.name)}</b><div class="muted tiny">@${esc(b.handle)} · ${esc(b.city)}</div></div><span class="spacer"></span><button class="secondary" onclick="sendPhotoDM('${id}')">📷</button><button class="iconbtn" onclick="closeModal()">✕</button></div><div id="chatlog" class="chatlog">${ms.map(m=>`<div class="bubble ${m.from==='me'?'me':'bot'}">${m.image?`<img src="${m.image}" style="max-width:220px;border-radius:12px;display:block;margin-bottom:5px">`:''}${esc(m.text)}</div>`).join('')||'<div class="muted">Napisz pierwszą wiadomość.</div>'}</div><div class="composer"><input id="chatInput" placeholder="Wiadomość..." onkeydown="if(event.key==='Enter')sendChat()"><button class="iconbtn" onclick="sendChat()"><svg class="icon"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button></div>`;modal.classList.add('show');setTimeout(()=>{let c=document.getElementById('chatlog');if(c)c.scrollTop=c.scrollHeight},30)}
+async function sendChat(){let t=chatInput.value.trim();if(!t)return;let id=activeChat,b=bot(id);state.messages[id].push({from:'me',text:t,time:Date.now()});b.affinity=Math.min(100,b.affinity+1);if(/[😏😘❤️🔥]|podob|spotk|pocał|hot/i.test(t))b.chemistry=Math.min(100,(b.chemistry||0)+2);await save();openChat(id);let cl=document.getElementById('chatlog');if(cl){cl.insertAdjacentHTML('beforeend','<div class="typing"><i></i><i></i><i></i></div>');cl.scrollTop=cl.scrollHeight}setTimeout(async()=>{let aiText=await cloudDM(b,t);state.messages[id].push({from:'bot',text:aiText,time:Date.now(),unread:activeChat!==id});await save();if(activeChat===id)openChat(id);renderMessages()},700+Math.floor(Math.random()*800))}
 function openStory(id){let b=bot(id);modalBox.innerHTML=`<div class="row"><img class="avatar" src="${b.avatar}"><b>@${esc(b.handle)}</b><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><img class="storyview" src="${imgSeed('story_'+id+'_'+Math.floor(Date.now()/1800000))}"><div class="row" style="justify-content:center;margin-top:10px"><button class="pill" onclick="reactStory('${id}','🔥')">🔥</button><button class="pill" onclick="reactStory('${id}','😍')">😍</button><button class="pill" onclick="reactStory('${id}','😂')">😂</button><button class="pill" onclick="reactStory('${id}','😏')">😏</button></div><div class="composer" style="margin-top:10px"><input id="sr" placeholder="Odpowiedz na relację..."><button class="iconbtn" onclick="storyReply('${id}')"><svg class="icon"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button></div>`;modal.classList.add('show')}
-async function storyReply(id){let t=sr.value.trim();if(!t)return;state.messages[id]=state.messages[id]||[];state.messages[id].push({from:'me',text:'Odpowiedź na relację: '+t,time:Date.now()});await save();closeModal();setTimeout(async()=>{let b=bot(id);state.messages[id].push({from:'bot',text:dmReply(b,t),time:Date.now()});await save();renderMessages()},500);toast('Wysłano do DM')}
+async function storyReply(id){let t=sr.value.trim();if(!t)return;state.messages[id]=state.messages[id]||[];state.messages[id].push({from:'me',text:'Odpowiedź na relację: '+t,time:Date.now()});await save();closeModal();setTimeout(async()=>{let b=bot(id);state.messages[id].push({from:'bot',text:await cloudDM(b,t),time:Date.now()});await save();renderMessages()},500);toast('Wysłano do DM')}
 function editProfile(){modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Edytuj profil</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><label class="formlabel">Zdjęcie profilowe</label><input id="epAvatar" type="file" accept="image/*"><label class="formlabel">Nazwa</label><input id="epName" type="text" value="${esc(state.player.name)}"><label class="formlabel">Login</label><input id="epHandle" type="text" value="${esc(state.player.handle)}"><label class="formlabel">Miasto</label><input id="epCity" type="text" value="${esc(state.player.city)}"><label class="formlabel">Bio</label><textarea id="epBio" rows="4">${esc(state.player.bio)}</textarea><button class="primary" style="width:100%;margin-top:12px" onclick="saveProfile()">Zapisz profil</button>`;modal.classList.add('show')}
-async function saveProfile(){let h=epHandle.value.trim().replace(/^@/,'').replace(/\s+/g,'');if(!epName.value.trim()||!h)return toast('Nazwa i login są wymagane');state.player.name=epName.value.trim();state.player.handle=h;state.player.city=epCity.value.trim();state.player.bio=epBio.value.trim();if(epAvatar.files[0])state.player.avatar=await fileData(epAvatar.files[0],500);await save();closeModal();renderAll();toast('Profil zapisany')}
-function openSettings(){modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Ustawienia</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="settingsrow"><div><b>Konto prywatne</b><div class="muted tiny">Symulowane ustawienie profilu</div></div><div class="switch ${state.player.private?'on':''}" onclick="togglePrivate(this)"></div></div><div class="settingsrow" onclick="showSaved()"><b>Zapisane posty</b><span class="spacer"></span><span class="muted">${state.saved.length}</span></div><div class="settingsrow" onclick="editProfile()"><b>Edytuj profil</b><span class="spacer">›</span></div><div class="settingsrow" onclick="exportData()"><b>Eksport danych</b><span class="spacer">›</span></div><div class="settingsrow" onclick="resetApp()"><b style="color:#ff7474">Reset aplikacji</b></div>`;modal.classList.add('show')}
+async function saveProfile(){let h=epHandle.value.trim().replace(/^@/,'').replace(/\s+/g,'');if(!epName.value.trim()||!h)return toast('Nazwa i login są wymagane');state.player.name=epName.value.trim();state.player.handle=h;state.player.city=epCity.value.trim();state.player.bio=epBio.value.trim();if(epAvatar.files[0])state.player.avatar=await fileData(epAvatar.files[0],500);await save();closeModal();ensureV13();offlineProgress();persistentTick();realityTick();sentientTick();lifeTick(true);renderAll();setTimeout(backgroundCloudSync,2500);toast('Profil zapisany')}
+function openSettings(){let st=brainReady()?(state.brain.status==='online'?'AI online':'AI włączone'):'tryb lokalny';modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Ustawienia</h3><span class="spacer"></span><span class="brainbadge ${brainReady()?'on':''}"><span class="brainstatus"></span>${st}</span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="worldcard"><b>AI Brain / Online World V13</b><div class="muted tiny" style="margin:4px 0 10px">Po podłączeniu backendu DM, komentarze i analiza zdjęć korzystają z prawdziwego modelu AI. Bez backendu aplikacja automatycznie używa trybu lokalnego.</div><input id="brainUrlInput" type="url" placeholder="https://twoj-backend.vercel.app" value="${esc(state.brain?.url||'')}"><div class="row" style="margin-top:9px"><button class="secondary grow" onclick="state.brain.enabled=!state.brain.enabled;state.brain.url=brainUrlInput.value.trim();save();openSettings()">${state.brain?.enabled?'Wyłącz AI':'Włącz AI'}</button><button class="primary grow" onclick="testBrain()">Test połączenia</button></div>${state.brain?.lastError?`<div class="aihint">Ostatni błąd: ${esc(state.brain.lastError)}</div>`:''}</div><div class="settingsrow"><div><b>Konto prywatne</b><div class="muted tiny">Symulowane ustawienie profilu</div></div><div class="switch ${state.player.private?'on':''}" onclick="togglePrivate(this)"></div></div><div class="settingsrow" onclick="showSaved()"><b>Zapisane posty</b><span class="spacer"></span><span class="muted">${state.saved.length}</span></div><div class="settingsrow" onclick="editProfile()"><b>Edytuj profil</b><span class="spacer">›</span></div><div class="settingsrow" onclick="exportData()"><b>Eksport danych</b><span class="spacer">›</span></div><div class="settingsrow" onclick="resetApp()"><b style="color:#ff7474">Reset aplikacji</b></div>`;modal.classList.add('show')}
 async function togglePrivate(el){state.player.private=!state.player.private;el.classList.toggle('on',state.player.private);await save()}
 function showSaved(){let posts=state.saved.map(id=>state.posts.find(p=>p.id===id)).filter(Boolean);modalBox.innerHTML=`<div class="row"><h3 style="margin:0">Zapisane</h3><span class="spacer"></span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="grid" style="margin-top:12px">${posts.map(p=>`<img src="${p.img}">`).join('')||'<span class="muted">Brak zapisanych postów.</span>'}</div>`}
 function exportData(){let blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='aigram-backup.json';a.click();URL.revokeObjectURL(a.href)}
 async function resetApp(){if(!confirm('To usunie profil, posty, DM i ustawienia z tej wersji aplikacji. Kontynuować?'))return;state=blank();seedBots();seedPosts();await save();location.reload()}
 function closeModal(){modal.classList.remove('show');activeChat=null}
-function switchPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='explore')renderExplore();if(id==='reels')renderReels();if(id==='messages')renderMessages();if(id==='profile')renderProfile();if(id==='activity'){markActivityRead();renderActivity()}}
-function renderAll(){renderStories();renderSuggestions();refreshFeed(false);renderExplore();renderReels();renderMessages();renderProfile();renderActivity();updateActivityDot()}
+function switchPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='explore')renderExplore();if(id==='online')renderOnline();if(id==='life')renderLife();if(id==='sentient')renderSentient();if(id==='reality')renderReality();if(id==='persistent')renderPersistent();if(id==='world')renderWorld();if(id==='reels')renderReels();if(id==='messages')renderMessages();if(id==='profile')renderProfile();if(id==='activity'){markActivityRead();renderActivity()}}
+function renderAll(){renderStories();renderSuggestions();refreshFeed(false);renderExplore();renderOnline();renderLife();renderSentient();renderReality();renderPersistent();renderWorld();renderReels();renderMessages();renderProfile();renderActivity();updateActivityDot()}
 document.querySelectorAll('.navbtn').forEach(b=>b.onclick=()=>switchPage(b.dataset.page));modal.onclick=e=>{if(e.target===modal)closeModal()};
-(async()=>{await load();if(!state.initialized)onboard.classList.add('show');renderAll();if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{})})();setInterval(()=>state?.initialized&&save(),12000);setInterval(socialTick,30000);document.addEventListener('visibilitychange',()=>document.hidden&&save());
+(async()=>{await load();if(!state.initialized)onboard.classList.add('show');renderAll();if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{})})();setInterval(()=>state?.initialized&&save(),12000);setInterval(socialTick,30000);setInterval(livingWorldTick,45000);setInterval(persistentTick,55000);setInterval(realityTick,65000);setInterval(sentientTick,70000);setInterval(()=>lifeTick(false),95000);setInterval(backgroundCloudSync,120000);document.addEventListener('visibilitychange',()=>{if(document.hidden){state.lastOpened=Date.now();save()}});
 </script>
 </body></html>
