@@ -1,0 +1,6 @@
+AIgram V13.3 — DM REAL FIX
+- naprawiony właściwy błąd: dmReply() odwoływał się do niezdefiniowanego `id`
+- sentientObserveDM() używa teraz b.id
+- cloudDM() też używa b.id zamiast aktywnego czatu
+- sendChat() ma awaryjny fallback, więc nawet błąd Brain nie blokuje odpowiedzi
+- DB/cache podbite do V13.3
