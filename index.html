@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="theme-color" content="#0a0a0c">
 <link rel="manifest" href="manifest.json">
-<title>AIgram V13</title>
+<title>AIgram V13.2</title>
 <style>
 :root{
  --bg:#09090b;--surface:#111216;--surface2:#181a20;--surface3:#20232b;
@@ -260,7 +260,7 @@ img{background:#17191f}
 <div id="toast" class="toast"></div>
 
 <script>
-const DB='AIgramV13DB',STORE='state',KEY='main';
+const DB='AIgramV13_2DB',STORE='state',KEY='main';
 const FIRST=['Lena','Mila','Noah','Aya','Zoe','Nina','Leo','Sofia','Maya','Emil','Clara','Luca','Emma','Max','Nora','Theo','Julia','Oskar','Amelia','Finn','Elsa','Miko','Laura','Alex','Sara','Kai','Mia','Ben','Lina','Eli','Olivia','Daniel','Hanna','Victor','Elena','Adam','Iga','Klara','Anton','Marta'];
 const CITIES=['Berlin','Warszawa','Amsterdam','London','Tokyo','Barcelona','Rome','Prague','Vienna','Paris','Lisbon','Oslo','Makarska','Wrocław','Split','Zagreb'];
 const BIOS=['travel • coffee • photos','city life & late nights','fitness • food • trips','photography and small adventures','music • friends • spontaneous plans','ocean, mountains, good people'];
@@ -324,7 +324,7 @@ async function testBrain(){
  if(!url)return toast('Wpisz adres backendu');
  state.brain.url=url;state.brain.enabled=true;await save();
  toast('Sprawdzam AI…');
- let r=await callBrain('ping',{hello:'AIgram V13'},12000);
+ let r=await callBrain('ping',{hello:'AIgram V13.2'},12000);
  if(r){toast('AI Brain działa ✓');openSettings()}else{toast('Brak połączenia — działa tryb lokalny');openSettings()}
 }
 async function cloudDM(b,text){
@@ -337,7 +337,7 @@ async function cloudDM(b,text){
    history:safeHistory(b.id),
    latestPost:latest?{caption:latest.cap,location:latest.location,image:latest.img,created:latest.created}:null
  });
- if(r?.text){remember(b,'user',text);remember(b,'bot',r.text);sentientObserveDM(id,r.text,'bot');if(typeof r.chemistryDelta==='number')b.chemistry=Math.max(0,Math.min(100,(b.chemistry||0)+r.chemistryDelta));if(typeof r.affinityDelta==='number')b.affinity=Math.max(0,Math.min(100,(b.affinity||0)+r.affinityDelta));return r.text}
+ if(r?.text){remember(b,'user',text);remember(b,'bot',r.text);sentientObserveDM(activeChat,r.text,'bot');if(typeof r.chemistryDelta==='number')b.chemistry=Math.max(0,Math.min(100,(b.chemistry||0)+r.chemistryDelta));if(typeof r.affinityDelta==='number')b.affinity=Math.max(0,Math.min(100,(b.affinity||0)+r.affinityDelta));return r.text}
  return dmReply(b,text);
 }
 async function cloudCommentReply(p,c,b,text){
@@ -1083,6 +1083,100 @@ function renderOnline(){
  onlineStatus.innerHTML=`<b>${state.online.connected?'✓ Backend połączony':'Tryb lokalny'}</b><div class="muted tiny" style="margin-top:5px">World ID: ${esc(state.online.worldId)}</div><div class="muted tiny">Cloud state: ${state.online.cloudState?'aktywny':'nieaktywny'} · Auto-sync: ${state.online.autoSync?'ON':'OFF'}</div><div class="muted tiny">Ostatnia synchronizacja: ${state.online.lastSync?new Date(state.online.lastSync).toLocaleString('pl-PL'):'—'}</div>`;
 }
 function backgroundCloudSync(){if(state?.initialized&&state.online?.autoSync&&state.online?.backendUrl)syncCloud(false)}
+
+function detectPostIntent(text=''){
+  const t=String(text||'').toLowerCase().trim();
+  const has=(arr)=>arr.some(x=>t.includes(x));
+  const explicitSex = has(['wyrucha','ruchał','ruchal','ruchać','ruchac','pieprzył','pieprzyl','przeleciał','przelecial','seks','sex','dupe','dupę','tyłek','tylek','anal','oral','loda','wyrwałbym cię','wyrwalbym cie']);
+  const flirt = explicitSex || has(['hot','sexy','seksown','kto mnie chce','chciałbyś mnie','chcialbys mnie','podobam','ładny','ladny','przystojny','piękny','piekny','randka','flirt']);
+  const conflict = has(['wkurw','zjeb','idiot','debilu','spierdal','nienawidzę','nienawidze','foch','zazdro','obrazi']);
+  const humor = has(['haha','xD','xd','lol','bek','żart','zart']);
+  const travel = has(['makarsk','split','chorwac','praga','prague','wyjazd','podróż','podroz','hotel','plaża','plaza','góry','gory']);
+  const question = /\?/.test(t) || /^(kto|co|czy|gdzie|jak|który|ktory|komu|ile|dlaczego)\b/.test(t);
+  if(explicitSex && question) return 'sexual_question';
+  if(explicitSex) return 'sexual_provocation';
+  if(conflict) return 'conflict';
+  if(flirt && question) return 'flirty_question';
+  if(flirt) return 'flirt';
+  if(humor) return 'humor';
+  if(travel) return 'travel';
+  if(question) return 'question';
+  return 'general';
+}
+function personaCommentTone(b){
+  const dna=b?.dna||b?.sentientDNA||{};
+  const rel=(state.socialGraph&&b?state.socialGraph[b.id]:null)||{};
+  const chemistry=Number(rel.chemistry||rel.closeness||0);
+  const jealousy=Number(rel.jealousy||0);
+  return {dna,chemistry,jealousy};
+}
+function contextualCommentPool(intent,b){
+  const name=(b?.name||b?.handle||'').split(' ')[0];
+  const {chemistry,jealousy}=personaCommentTone(b);
+  const bold = chemistry>55;
+  const jealous = jealousy>45;
+  const pools={
+    sexual_question:[
+      bold ? "Ja bym się zgłosił, ale chyba nie tutaj 😏" : "Odważne pytanie 😂",
+      "No dobra, tym razem serio pytasz? 😏",
+      "Ktoś tu mocno testuje komentarze 👀",
+      jealous ? "Widzę, że robisz casting publicznie. Ciekawe." : "To pytanie na pewno miało wywołać chaos 😂",
+      bold ? "Nie prowokuj, bo ktoś potraktuje to zbyt serio 😏" : "Tego się nie spodziewałem pod tym postem",
+      "Komentarze zaraz odlecą po takim pytaniu 😂",
+      bold ? "Masz odwagę pisać takie rzeczy publicznie, szanuję 😏" : "Bardzo subtelnie, naprawdę 😂"
+    ],
+    sexual_provocation:[
+      bold ? "Ty naprawdę lubisz prowokować 😏" : "Okej, mocny caption 😂",
+      "To już nawet nie jest subtelne 👀",
+      jealous ? "A potem się dziwisz, że ludzie są zazdrośni." : "Ktoś tu ewidentnie chce reakcji 😏",
+      "Internet tego nie zapomni 😂"
+    ],
+    flirty_question:[
+      bold ? "Zależy, kto pyta 😏" : "To brzmi jak pułapka 😂",
+      "Pytanie z gatunku niebezpiecznych 👀",
+      jealous ? "Nie wiem, po co pytasz wszystkich." : "Ciekawi mnie, jakiej odpowiedzi oczekujesz 😏"
+    ],
+    flirt:[
+      bold ? "Nie ułatwiasz ludziom zachowania rozsądku 😏" : "Dobrze wiesz, co robisz tym zdjęciem",
+      "Ktoś tu dzisiaj zbiera reakcje 👀",
+      jealous ? "Tak się właśnie zaczynają problemy." : "Ten post ma zdecydowanie konkretną energię 😏"
+    ],
+    conflict:[
+      "Okej, tu już poszło grubo.",
+      "Ktoś się chyba naprawdę wkurzył.",
+      jealous ? "No i wiedziałem, że to się skończy dramą." : "Czekam na ciąg dalszy, bo tu ewidentnie coś jest."
+    ],
+    humor:[
+      "Dobra, to mnie rozbroiło 😂",
+      "Nie powinno mnie to bawić aż tak.",
+      "Komentarze będą lepsze niż sam post 😂"
+    ],
+    travel:[
+      "To miejsce wygląda świetnie.",
+      "Masz jeszcze dużo przed sobą czy już końcówka wyjazdu?",
+      "Daj znać, czy warto tam jechać.",
+      "Ten klimat jest naprawdę dobry."
+    ],
+    question:[
+      "Dobre pytanie. Sam jestem ciekaw odpowiedzi.",
+      "To zależy bardziej niż się wydaje.",
+      "Ja bym powiedział: tak, ale z jednym zastrzeżeniem 👀"
+    ],
+    general:[
+      "Ten post ma dobrą energię.",
+      "W końcu coś innego na feedzie.",
+      "Dobrze to siadło.",
+      "To wygląda jak początek jakiejś historii 👀"
+    ]
+  };
+  return pools[intent]||pools.general;
+}
+function makeContextualLocalComment(post,b){
+  const text=[post?.caption,post?.location,post?.text].filter(Boolean).join(' ');
+  const intent=detectPostIntent(text);
+  const pool=contextualCommentPool(intent,b);
+  return pool[Math.floor(Math.random()*pool.length)];
+}
 async function finishOnboarding(){let n=obName.value.trim(),h=obHandle.value.trim().replace(/^@/,'').replace(/\s+/g,'');if(!n||!h)return toast('Wpisz nazwę i login');state.player={...state.player,name:n,handle:h,city:obCity.value.trim(),bio:obBio.value.trim(),avatar:obAvatar.files[0]?await fileData(obAvatar.files[0],500):''};state.initialized=true;await save();onboard.classList.remove('show');renderAll()}
 function renderStories(){stories.innerHTML=`<div class="story" onclick="openMyStory()"><div class="storyring"><img src="${state.player.avatar||imgSeed('me',180)}"></div><span>Twoja relacja</span></div>`+shuffle(state.bots).slice(0,24).map(b=>`<div class="story" onclick="openStory('${b.id}')"><div class="storyring"><img src="${b.avatar}"></div><span>${esc(b.handle)}</span></div>`).join('')}
 function renderSuggestions(){let s=shuffle(state.bots.filter(b=>!state.followingIds.includes(b.id))).slice(0,8);suggestions.innerHTML=`<div class="row" style="margin:1px 2px 8px"><b>Proponowane dla Ciebie</b><span class="spacer"></span><span class="muted tiny">Odkrywaj</span></div><div class="suggest">${s.map(b=>`<div class="suggestcard"><img src="${b.avatar}"><b style="display:block;margin-top:6px">@${esc(b.handle)}</b><div class="muted tiny">${esc(b.city)}</div><button class="primary" style="margin-top:8px;padding:7px 10px" onclick="toggleFollow('${b.id}')">Obserwuj</button></div>`).join('')}</div>`}

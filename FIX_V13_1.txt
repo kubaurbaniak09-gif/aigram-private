@@ -1,0 +1,6 @@
+AIgram V13.1 DM FIX
+- poprawiony błąd DM po wysłaniu wiadomości
+- cloudDM używa teraz aktywnego czatu zamiast niezdefiniowanego id
+- bump DB do AIgramV13_1DB
+- bump service worker cache
+- wymuszenie szybszego przejęcia nowego service workera

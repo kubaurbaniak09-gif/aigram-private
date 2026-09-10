@@ -1,0 +1,7 @@
+AIgram V13.2 — Context Comments
+- intent detection for posts
+- sexual_question / sexual_provocation / flirt / conflict / humor / travel / question / general
+- local comments react to the actual caption instead of random filler
+- stronger AI Brain instructions for direct questions and provocative adult posts
+- adult flirt can be bold/suggestive, but not graphically sexual
+- DB/cache bumped to V13.2
